@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glint - Modern Portfolio</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="styles/css/style.css" rel="stylesheet">
+    <link href="styles/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="top-navbar d-none d-lg-block">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-translate="live-chat">Contact</span>
+                </button>
+                <button class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-linkedin-in"></i>
+                </button>
+                <button class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-instagram"></i>
+                </button>
+            </div>
+            <div>
+                <select class="lang-switcher" id="langSwitch">
+                    <option value="en">EN</option>
+                    <option value="ar">AR</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/main/logo.png" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item fs-5">
+                    <a class="nav-link active" href="#home" data-translate="home">Home</a>
+                </li>
+                <li class="nav-item fs-5">
+                    <a class="nav-link" href="#about" data-translate="about">About</a>
+                </li>
+                <li class="nav-item fs-5">
+                    <a class="nav-link" href="#services" data-translate="services">Services</a>
+                </li>
+                <li class="nav-item fs-5">
+                    <a class="nav-link" href="#portfolio" data-translate="portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item fs-5">
+                    <a class="nav-link" href="#blog" data-translate="blog">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center gap-3">
+            <button class="btn btn-link text-white">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="btn btn-link text-white" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                <i class="fas fa-th"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+        <img src="assets/images/main/logo.png" alt="Logo">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-outline-primary flex-fill">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button class="btn btn-outline-primary flex-fill">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="btn btn-outline-primary flex-fill">
+                <i class="fab fa-linkedin-in"></i>
+            </button>
+            <button class="btn btn-outline-primary flex-fill">
+                <i class="fab fa-instagram"></i>
+            </button>
+        </div>
+        <hr class="border-secondary">
+        <ul class="nav flex-column">
+            <li class="nav-item border-bottom border-secondary py-3">
+                <a class="nav-link active" href="#home" data-translate="home">Home</a>
+            </li>
+            <li class="nav-item border-bottom border-secondary py-3">
+                <a class="nav-link" href="#about" data-translate="about">About</a>
+            </li>
+            <li class="nav-item border-bottom border-secondary py-3">
+                <a class="nav-link" href="#services" data-translate="services">Services</a>
+            </li>
+            <li class="nav-item border-bottom border-secondary py-3">
+                <a class="nav-link" href="#portfolio" data-translate="portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item border-bottom border-secondary py-3">
+                <a class="nav-link" href="#blog" data-translate="blog">Blog</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Side Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sideMenu">
+    <div class="offcanvas-header">
+        <img src="assets/images/main/logo.png" alt="Logo">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <hr class="border-secondary">
+        <p class="lead text-white">We are a creative studio specializing in design, development and strategy. We work with clients from all over the world.</p>
+        <hr class="border-secondary">
+        <div class="d-flex gap-3 justify-content-center">
+            <a href="#" class="text-white fs-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="hero-bg-shape shape-1"></div>
+    <div class="hero-bg-shape shape-2"></div>
+
+    <div class="container mb-auto">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1 class="hero-title" data-translate="hero-title"><span style="color: var(--primary-color);">imagination</span> is more important than knowledge</h1>
+                <p class="hero-subtitle" data-translate="hero-subtitle">Designer & Developer based in New York, specializing in UI/UX Design and Web Development</p>
+                <button class="btn btn-primary">
+                    <span data-translate="get-started">Get Started</span> <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="assets/images/hero/1.png" alt="Hero" class="img-fluid hero-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-dark">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <p class="section-subtitle" data-translate="about-subtitle">ABOUT ME</p>
+                <h2 class="section-main-title" data-translate="about-title">I'm a <span style="color: var(--primary-color);">Designer</span> & Developer</h2>
+                <p class="border-left-text mb-4" data-translate="about-text">Passionate about creating beautiful and functional digital experiences that help businesses grow and succeed in the digital world.</p>
+                <button class="btn btn-primary">
+                    <span data-translate="download-cv">Download CV</span> <i class="fas fa-download ms-2"></i>
+                </button>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="video-wrapper">
+                    <img src="assets/images/about/cover.png" alt="Video" class="img-fluid">
+                    <div class="play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/JYz4Gr_dySQ?si=eiWR_fPnq-HKsdk-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!--                    <iframe src="https://www.youtube.com/embed/JYz4Gr_dySQ?si=eiWR_fPnq-HKsdk-" allowfullscreen></iframe>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Experience Section -->
+<section id="experience">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <h4 style="color: var(--primary-color);" data-translate="experience-subtitle">MY EXPERIENCE</h4>
+                <h2 class="section-main-title" data-translate="experience-title">My <span style="color: var(--primary-color);">Journey</span></h2>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <p class="border-left-text" data-translate="experience-text">Over 10 years of experience in design and development, working with leading companies and startups worldwide.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="experience-card">
+                    <p class="text-white-50 mb-2">2018-2023</p>
+                    <h5 style="color: var(--primary-color);">Senior Designer</h5>
+                    <p class="text-white-50">Creative Agency Inc.</p>
+                    <p>Led design projects for Fortune 500 companies, focusing on brand identity and digital experiences.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="experience-card">
+                    <p class="text-white-50 mb-2">2016-2018</p>
+                    <h5 style="color: var(--primary-color);">UI/UX Designer</h5>
+                    <p class="text-white-50">Tech Solutions Ltd.</p>
+                    <p>Designed user interfaces for web and mobile applications, improving user engagement by 40%.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.3s">
+                <div class="experience-card">
+                    <p class="text-white-50 mb-2">2014-2016</p>
+                    <h5 style="color: var(--primary-color);">Frontend Developer</h5>
+                    <p class="text-white-50">Digital Studio</p>
+                    <p>Developed responsive websites and web applications using modern frameworks and technologies.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.4s">
+                <div class="experience-card">
+                    <p class="text-white-50 mb-2">2012-2014</p>
+                    <h5 style="color: var(--primary-color);">Graphic Designer</h5>
+                    <p class="text-white-50">Design House</p>
+                    <p>Created visual designs for print and digital media, including logos, brochures, and social media content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="progress-circle mx-auto">
+                    <svg width="150" height="150">
+                        <circle class="progress-bg" cx="75" cy="75" r="65"></circle>
+                        <circle class="progress-bar-circle" cx="75" cy="75" r="65" stroke-dasharray="408.4" stroke-dashoffset="82"></circle>
+                    </svg>
+                    <div class="progress-text">80%</div>
+                </div>
+                <h5 class="mt-3">Branding</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="progress-circle mx-auto">
+                    <svg width="150" height="150">
+                        <circle class="progress-bg" cx="75" cy="75" r="65"></circle>
+                        <circle class="progress-bar-circle" cx="75" cy="75" r="65" stroke-dasharray="408.4" stroke-dashoffset="41"></circle>
+                    </svg>
+                    <div class="progress-text">90%</div>
+                </div>
+                <h5 class="mt-3">Design</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center animate-on-scroll" style="transition-delay: 0.3s">
+                <div class="progress-circle mx-auto">
+                    <svg width="150" height="150">
+                        <circle class="progress-bg" cx="75" cy="75" r="65"></circle>
+                        <circle class="progress-bar-circle" cx="75" cy="75" r="65" stroke-dasharray="408.4" stroke-dashoffset="102"></circle>
+                    </svg>
+                    <div class="progress-text">75%</div>
+                </div>
+                <h5 class="mt-3">Development</h5>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center animate-on-scroll" style="transition-delay: 0.4s">
+                <div class="progress-circle mx-auto">
+                    <svg width="150" height="150">
+                        <circle class="progress-bg" cx="75" cy="75" r="65"></circle>
+                        <circle class="progress-bar-circle" cx="75" cy="75" r="65" stroke-dasharray="408.4" stroke-dashoffset="61"></circle>
+                    </svg>
+                    <div class="progress-text">85%</div>
+                </div>
+                <h5 class="mt-3">Marketing</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="bg-dark position-relative">
+    <div class="section-title-bg">OUR SERVICES</div>
+    <div class="container position-relative">
+        <div class="row mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <p class="section-subtitle" data-translate="services-subtitle">WHAT WE DO</p>
+                <h2 class="section-main-title" data-translate="services-title">Our <span style="color: var(--primary-color);">Services</span></h2>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <p class="border-left-text" data-translate="services-text">We offer a full range of creative services to help your business stand out and succeed in the digital landscape.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="service-card active">
+                    <img src="assets/images/shapes/1.svg" class="service-icon" alt="UI Design">
+                    <h4 class="mb-3" data-translate="service-1-title">UI/UX Design</h4>
+                    <p data-translate="service-1-text">Creating intuitive and engaging user interfaces that delight users and drive conversions.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="service-card">
+                    <img src="assets/images/shapes/2.svg" class="service-icon" alt="Web Development">
+                    <h4 class="mb-3" style="color: var(--primary-color);" data-translate="service-2-title">Web Development</h4>
+                    <p class="text-white-50" data-translate="service-2-text">Building responsive and performant websites using the latest technologies and best practices.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.3s">
+                <div class="service-card">
+                    <img src="assets/images/shapes/3.svg" class="service-icon" alt="Branding">
+                    <h4 class="mb-3" style="color: var(--primary-color);" data-translate="service-3-title">Branding</h4>
+                    <p class="text-white-50" data-translate="service-3-text">Developing strong brand identities that resonate with your target audience and stand the test of time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="position-relative">
+    <div class="section-title-bg">WORKING PROCESS</div>
+    <div class="container position-relative">
+        <div class="row mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <p class="section-subtitle" data-translate="portfolio-subtitle">PORTFOLIO</p>
+                <h2 class="section-main-title" data-translate="portfolio-title">Recent <span style="color: var(--primary-color);">Projects</span></h2>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <p class="border-left-text" data-translate="portfolio-text">Showcasing our latest work and the innovative solutions we've delivered for our clients.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="project-card">
+                    <img src="assets/images/projects/1.png" class="project-image" alt="Project">
+                    <div class="project-overlay">
+                        <h3>Brand Identity</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="project-card">
+                    <img src="assets/images/projects/2.png" class="project-image" alt="Project">
+                    <div class="project-overlay">
+                        <h3>Web Design</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.3s">
+                <div class="project-card">
+                    <img src="assets/images/projects/3.png" class="project-image" alt="Project">
+                    <div class="project-overlay">
+                        <h3>Mobile App</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="bg-dark position-relative">
+    <div class="section-title-bg">TESTIMONIALS</div>
+    <div class="container position-relative">
+        <div class="row mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <p class="section-subtitle" data-translate="testimonials-subtitle">CLIENT FEEDBACK</p>
+                <h2 class="section-main-title" data-translate="testimonials-title">What <span style="color: var(--primary-color);">Clients</span> Say</h2>
+            </div>
+            <div class="col-lg-6 d-flex align-items-end justify-content-lg-end animate-on-scroll" style="transition-delay: 0.2s">
+                <p class="border-left-text flex-grow-1 mb-0" data-translate="testimonials-text">Real feedback from real clients who trust us with their projects.</p>
+                <button class="btn btn-link text-white ms-3" id="testimonialPrev">
+                    <i class="fas fa-arrow-left fs-4"></i>
+                </button>
+                <button class="btn btn-link text-white" id="testimonialNext">
+                    <i class="fas fa-arrow-right fs-4"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-card">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-lg-10">
+                        <div class="d-flex align-items-center gap-4 flex-column flex-md-row">
+                            <div>
+                                <img src="assets/images/reviews/1.jpg" class="testimonial-avatar" alt="Client">
+                            </div>
+                            <div class="flex-fill">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="lead fw-bold mb-3" data-translate="testimonial-1-text">Working with this team was an absolute pleasure. They delivered beyond our expectations and on time.</p>
+                                <p class="mb-0"><strong data-translate="testimonial-1-name">John Michaels</strong></p>
+                                <p class="text-white-50" data-translate="testimonial-1-location">New York, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-lg-10">
+                        <div class="d-flex align-items-center gap-4 flex-column flex-md-row">
+                            <div>
+                                <img src="assets/images/reviews/1.jpg" class="testimonial-avatar" alt="Client">
+                            </div>
+                            <div class="flex-fill">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="lead fw-bold mb-3" data-translate="testimonial-2-text">Exceptional quality and attention to detail. Highly recommend for any design project.</p>
+                                <p class="mb-0"><strong data-translate="testimonial-2-name">Sarah Klein</strong></p>
+                                <p class="text-white-50" data-translate="testimonial-2-location">London, UK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-lg-10">
+                        <div class="d-flex align-items-center gap-4 flex-column flex-md-row">
+                            <div>
+                                <img src="assets/images/reviews/1.jpg" class="testimonial-avatar" alt="Client">
+                            </div>
+                            <div class="flex-fill">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="lead fw-bold mb-3" data-translate="testimonial-3-text">Professional, creative, and reliable. They transformed our vision into reality perfectly.</p>
+                                <p class="mb-0"><strong data-translate="testimonial-3-name">Robert Patterson</strong></p>
+                                <p class="text-white-50" data-translate="testimonial-3-location">Sydney, Australia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="position-relative">
+    <div class="section-title-bg">SPECIFICATIONS</div>
+    <div class="container position-relative">
+        <div class="row mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <p class="section-subtitle" data-translate="pricing-subtitle">PRICING PLANS</p>
+                <h2 class="section-main-title" data-translate="pricing-title">Choose Your <span style="color: var(--primary-color);">Plan</span></h2>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <p class="border-left-text" data-translate="pricing-text">Flexible pricing options to suit businesses of all sizes and budgets.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="pricing-card">
+                    <img src="assets/images/shapes/1.svg" class="mx-auto d-block mb-4" alt="Basic">
+                    <h4 data-translate="basic-plan">Basic Plan</h4>
+                    <p class="text-white-50 mb-4" data-translate="basic-plan-desc">For Small Projects</p>
+                    <hr class="border-secondary">
+                    <div class="price">$49</div>
+                    <p class="mb-4" data-translate="per-month">per month</p>
+                    <button class="btn btn-primary" data-translate="read-more">Read More</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="pricing-card active">
+                    <img src="assets/images/shapes/2.svg" class="mx-auto d-block mb-4" alt="Pro">
+                    <h4 data-translate="pro-plan">Pro Plan</h4>
+                    <p class="text-white-50 mb-4" data-translate="pro-plan-desc">For Growing Businesses</p>
+                    <hr class="border-light">
+                    <div class="price">$99</div>
+                    <p class="mb-4" data-translate="per-month">per month</p>
+                    <button class="btn btn-light text-dark" data-translate="read-more">Read More</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.3s">
+                <div class="pricing-card">
+                    <img src="assets/images/shapes/3.svg" class="mx-auto d-block mb-4" alt="Ultra">
+                    <h4 data-translate="ultra-plan">Ultra Plan</h4>
+                    <p class="text-white-50 mb-4" data-translate="ultra-plan-desc">For Large Enterprises</p>
+                    <hr class="border-secondary">
+                    <div class="price">$199</div>
+                    <p class="mb-4" data-translate="per-month">per month</p>
+                    <button class="btn btn-primary" data-translate="read-more">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="bg-dark position-relative">
+    <div class="section-title-bg">RECENT NEWS</div>
+    <div class="container position-relative">
+        <div class="row mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <p class="section-subtitle" data-translate="blog-subtitle">RECENT NEWS DESK</p>
+                <h2 class="section-main-title" data-translate="blog-title">Latest <span style="color: var(--primary-color);">Blog</span> Posts</h2>
+            </div>
+            <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <p class="border-left-text" data-translate="blog-text">Stay updated with our latest insights, tips, and industry news.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s">
+                <div class="blog-card h-100">
+                    <img src="assets/images/blogs/1.png" class="blog-image" alt="Blog">
+                    <div class="blog-content">
+                        <p class="blog-date">September 28, 2024</p>
+                        <h3 class="blog-title">The Future of Web Design Trends</h3>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none;"><span data-translate="read-more">Read More</span> →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s">
+                <div class="blog-card h-100">
+                    <img src="assets/images/blogs/2.png" class="blog-image" alt="Blog">
+                    <div class="blog-content">
+                        <p class="blog-date">October 15, 2024</p>
+                        <h3 class="blog-title">How to Build Better User Experiences</h3>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none;"><span data-translate="read-more">Read More</span> →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.3s">
+                <div class="blog-card h-100">
+                    <img src="assets/images/blogs/3.png" class="blog-image" alt="Blog">
+                    <div class="blog-content">
+                        <p class="blog-date">November 02, 2024</p>
+                        <h3 class="blog-title">Mastering Modern Development Tools</h3>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none;"><span data-translate="read-more">Read More</span> →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 animate-on-scroll">
+                <p class="section-subtitle" data-translate="newsletter-subtitle">STAY CONNECTED</p>
+                <h2 class="section-main-title mx-auto mb-4" style=";max-width: 400px;" data-translate="newsletter-title">Stay up to date, subscribe to the free <span style="color: var(--primary-color)">newsletter !</span></h2>
+                <div class="d-flex gap-2 justify-content-center flex-wrap">
+                    <input type="email" class="form-control" data-translate="email-placeholder" placeholder="Enter your email" style="max-width: 400px; background: #ffffff73; border: 1px solid var(--text-gray); color: var(--text-white);">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-paper-plane me-2"></i> <span data-translate="subscribe">Subscribe</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brands Section -->
+<section id="brands" class="bg-dark">
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-5">
+            <div class="col-lg-2 col-md-4 col-6 text-center animate-on-scroll" style="transition-delay: 0.1s">
+                <img src="assets/images/brands/1.png" class="brand-logo img-fluid" alt="Brand">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center animate-on-scroll" style="transition-delay: 0.2s">
+                <img src="assets/images/brands/2.png" class="brand-logo img-fluid" alt="Brand">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center animate-on-scroll" style="transition-delay: 0.3s">
+                <img src="assets/images/brands/3.png" class="brand-logo img-fluid" alt="Brand">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center animate-on-scroll" style="transition-delay: 0.4s">
+                <img src="assets/images/brands/4.png" class="brand-logo img-fluid" alt="Brand">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center animate-on-scroll" style="transition-delay: 0.5s">
+                <img src="assets/images/brands/5.png" class="brand-logo img-fluid" alt="Brand">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p class="text-white-50 mb-0">
+            <span data-translate="rights">© 2025 All Rights Reserved.</span> <span class="fw-bold" style="color: var(--primary-color);">Clickshare</span>
+        </p>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="styles/js/translation.js"></script>
+<script src="styles/js/main.js"></script>
+</body>
+</html>
