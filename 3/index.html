@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duha Al-Khashini - Fashion Designer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Kufi+Arabic:wght@100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNav">
+    <div class="container-xl">
+        <a class="navbar-brand" href="#hero">
+<!--            <span class="brand-text">Duha Al-Khashini</span>-->
+            <img src="assets/images/logo/horizontal.png" alt="Logo" class="logo" width="220">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bridal-collection" data-en="Bridal" data-ar="العرائس">Bridal</a></li>
+                <li class="nav-item"><a class="nav-link" href="#luxury-collection" data-en="Luxury" data-ar="الفاخر">Luxury</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blazer-collection" data-en="Blazer" data-ar="البليزر">Blazer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-2">
+                <button class="lang-switch" id="langToggle">
+                    <i class="fas fa-language"></i> <span id="langText">AR</span>
+                </button>
+                <a href="https://wa.me/97470920677" target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> <span data-en="Let's Talk" data-ar="تواصل معي">Let's Talk</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Offcanvas Menu for Mobile -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Duha Al-Khashini</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#hero" data-bs-dismiss="offcanvas" data-en="Home" data-ar="الرئيسية" data-bs-dismiss="offcanvas">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bridal-collection" data-bs-dismiss="offcanvas" data-en="Bridal" data-ar="العرائس">Bridal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#luxury-collection" data-bs-dismiss="offcanvas" data-en="Luxury" data-ar="الفاخر">Luxury</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blazer-collection" data-bs-dismiss="offcanvas" data-en="Blazer" data-ar="البليزر">Blazer</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact" data-bs-dismiss="offcanvas" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        </ul>
+        <hr>
+        <div class="d-flex flex-column gap-3">
+            <button class="lang-switch w-100" id="langToggleMobile">
+                <i class="fas fa-language"></i> <span id="langTextMobile">AR</span>
+            </button>
+            <a href="https://wa.me/97470920677" target="_blank" class="btn-whatsapp w-100 justify-content-center">
+                <i class="fab fa-whatsapp"></i> <span data-en="Let's Talk" data-ar="تواصل معي">Let's Talk</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section position-relative">
+    <div class="hero-bg">
+        <img src="assets/images/other/1.jpeg" alt="Duha Al-Khashini" class="hero-image">
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h1 class="hero-title" data-en="I design Tailored Jackets-inspired silhouettes where modern elegance meets timeless detail." data-ar="أصمّم سترات عصرية تتقاطع فيها الأناقة العصرية مع اللمسات الكلاسيكية، لأخلق قطعاً تحمل شخصية المرأة وقوتها.">I design Tailored Jackets-inspired silhouettes where modern elegance meets timeless detail.</h1>
+                    <p class="hero-subtitle" data-en="My work blends imagination with precision, creating pieces that reflect a woman's confidence and individuality. Each design is crafted to balance boldness and simplicity—celebrating style with purpose." data-ar="أؤمن بأن التصميم هو حوار بين الخيال والدقة، وبين الجرأة والبساطة—ولهذا أقدّم أزياء تجمع بين الشكل المتقن والهوية التي تليق بكل امرأة.">My work blends imagination with precision, creating pieces that reflect a woman's confidence and individuality. Each design is crafted to balance boldness and simplicity—celebrating style with purpose.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-shape"></div>
+    <div class="hero-shape-small"></div>
+</section>
+
+<!-- Video Section -->
+<section class="video-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="video-wrapper" data-bs-toggle="modal" data-bs-target="#videoModal">
+                    <img src="assets/images/logo/square.jpg" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="play-icon-overlay">
+                        <div class="play-icon-circle">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Play Button Below Video -->
+                <div class="video-button-container">
+                    <a href="https://wa.me/97470920677" target="_blank" class="btn btn-lg btn-whatsapp px-5 justify-content-center">
+                        <i class="fab fa-whatsapp"></i> <span data-en="Let's Talk" data-ar="تواصل معي">Let's Talk</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered video-modal-dialog">
+        <div class="modal-content video-modal-content">
+            <button type="button" class="btn-close btn-close-video text-white" data-bs-dismiss="modal" aria-label="Close">X</button>
+            <div class="video-modal-body">
+                <video controls>
+                    <source src="assets/videos/vid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Miss Palestine Section -->
+<section id="miss-palestine" class="miss-palestine-section bg-secondary bg-opacity-10">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <div class="miss-content" id="content">
+                    <h2 class="section-title" data-en="Worn by Miss Palestine & Miss Earth" data-ar="ملكة جمال فلسطين والأرض">Worn by Miss Palestine & Miss Earth</h2>
+                    <div class="title-divider"></div>
+                    <p class="miss-desc" data-en="Proudly honored to have my designs worn by the beauty queens representing Palestine and Earth. Each piece embodies elegance, strength, and cultural pride—crafted to shine on the most prestigious stages." data-ar="فخورة بأن تختار ملكات جمال فلسطين والأرض تصاميمي. كل قطعة تجسد الأناقة والقوة والفخر الثقافي—مصممة لتتألق على أرقى المنصات العالمية.">Proudly honored to have my designs worn by the beauty queens representing Palestine and Earth. Each piece embodies elegance, strength, and cultural pride—crafted to shine on the most prestigious stages.</p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="assets/images/miss/2.jpg" alt="Miss Palestine" class="object-fit-cover w-100 rounded-5" id="image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<!-- Bridal Collection -->
+<section id="bridal-collection" class="portfolio-section">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Bridal Collection" data-ar="مجموعة العرائس">Bridal Collection</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="owl-carousel owl-theme portfolio-carousel bridal-carousel">
+            <!-- Add images 1-10 for bridal -->
+            <div class="portfolio-item"><img src="assets/images/bridal/1.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/2.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/3.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/4.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/5.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/6.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/7.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/8.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/9.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/10.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/11.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/12.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/13.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/14.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/15.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/16.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/17.jpeg" alt="Bridal Design"></div>
+            <div class="portfolio-item"><img src="assets/images/bridal/18.jpeg" alt="Bridal Design"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Luxury & Modest Collection -->
+<section id="luxury-collection" class="portfolio-section bg-secondary bg-opacity-10 my-3 pb-0 pt-2">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Luxury & Modest Collection" data-ar="المجموعة الفاخرة والمحتشمة">Luxury & Modest Collection</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="owl-carousel owl-theme portfolio-carousel luxury-carousel">
+            <!-- Add images 1-27 for luxury -->
+            <div class="portfolio-item"><img src="assets/images/luxury/1.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/2.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/3.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/4.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/5.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/6.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/7.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/8.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/9.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/10.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/11.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/12.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/13.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/14.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/15.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/16.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/17.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/18.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/19.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/20.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/21.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/22.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/23.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/24.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/25.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/26.jpg" alt="Luxury Design"></div>
+            <div class="portfolio-item"><img src="assets/images/luxury/27.jpg" alt="Luxury Design"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Blazer Abaya Collection -->
+<section id="blazer-collection" class="portfolio-section">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Blazer Abaya Collection" data-ar="مجموعة البليزر عباية">Blazer Abaya Collection</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="owl-carousel owl-theme portfolio-carousel blazer-carousel">
+            <!-- Add images 1-20 for blazer -->
+            <div class="portfolio-item"><img src="assets/images/blazer/1.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/2.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/3.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/4.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/5.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/6.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/7.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/8.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/9.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/10.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/11.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/12.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/13.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/14.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/15.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/16.jpg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/17.jpeg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/18.jpeg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/19.jpeg" alt="Blazer Design"></div>
+            <div class="portfolio-item"><img src="assets/images/blazer/20.jpeg" alt="Blazer Design"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section d-none">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2 class="section-title" data-en="My Collection" data-ar="معرض أعمالي">My Collection</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="owl-carousel owl-theme portfolio-carousel">
+            <div class="portfolio-item">
+                <img src="assets/images/other/1.jpeg" alt="Design 1">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Elegant Abaya Collection" data-ar="مجموعة العبايات الأنيقة">Elegant Abaya Collection</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/2.jpeg" alt="Design 2">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Contemporary Design" data-ar="التصميم المعاصر">Contemporary Design</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/3.jpeg" alt="Design 3">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Luxury Evening Wear" data-ar="الأزياء المسائية الفاخرة">Luxury Evening Wear</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/4.jpeg" alt="Design 4">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Traditional Heritage" data-ar="التراث التقليدي">Traditional Heritage</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/5.jpeg" alt="Design 5">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Modern Minimalism" data-ar="البساطة العصرية">Modern Minimalism</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/6.jpeg" alt="Design 6">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Artistic Expression" data-ar="التعبير الفني">Artistic Expression</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/7.jpeg" alt="Design 7">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Bridal Collection" data-ar="مجموعة العرائس">Bridal Collection</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/8.jpeg" alt="Design 8">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Casual Elegance" data-ar="الأناقة اليومية">Casual Elegance</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/9.jpeg" alt="Design 9">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Seasonal Collection" data-ar="المجموعة الموسمية">Seasonal Collection</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/10.jpeg" alt="Design 10">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Premium Craftsmanship" data-ar="الحرفية الفاخرة">Premium Craftsmanship</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/11.jpeg" alt="Design 11">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Design" data-ar="تصميم الأزياء">Fashion Design</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/12.jpeg" alt="Design 12">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Elegant Collection" data-ar="المجموعة الأنيقة">Elegant Collection</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/13.jpeg" alt="Design 13">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Stylish Design" data-ar="التصميم الأنيق">Stylish Design</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/14.jpeg" alt="Design 14">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Creative Fashion" data-ar="الموضة الإبداعية">Creative Fashion</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/15.jpeg" alt="Design 15">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Unique Style" data-ar="الأسلوب الفريد">Unique Style</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/16.jpeg" alt="Design 16">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Timeless Beauty" data-ar="الجمال الخالد">Timeless Beauty</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/17.jpeg" alt="Design 17">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Sophisticated Design" data-ar="التصميم الراقي">Sophisticated Design</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/18.jpeg" alt="Design 18">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Excellence" data-ar="التميز في الموضة">Fashion Excellence</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/19.jpeg" alt="Design 19">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Couture Collection" data-ar="مجموعة الأزياء الراقية">Couture Collection</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/20.jpeg" alt="Design 20">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Designer Collection" data-ar="مجموعة المصمم">Designer Collection</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/21.jpeg" alt="Design 21">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Art" data-ar="فن الموضة">Fashion Art</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/22.jpeg" alt="Design 22">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Style Statement" data-ar="بيان الأناقة">Style Statement</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/23.jpeg" alt="Design 23">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Forward" data-ar="الموضة المتقدمة">Fashion Forward</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/24.jpeg" alt="Design 24">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Haute Couture" data-ar="الأزياء الراقية">Haute Couture</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/25.jpeg" alt="Design 25">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Refined Design" data-ar="التصميم الراقي">Refined Design</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/26.jpeg" alt="Design 26">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Fusion" data-ar="اندماج الموضة">Fashion Fusion</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/27.jpeg" alt="Design 27">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Style Mastery" data-ar="إتقان الأسلوب">Style Mastery</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/28.jpeg" alt="Design 28">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Innovation" data-ar="الابتكار في الموضة">Fashion Innovation</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/29.jpeg" alt="Design 29">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Design Excellence" data-ar="التميز في التصميم">Design Excellence</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/other/30.jpeg" alt="Design 30">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h4 data-en="Fashion Legacy" data-ar="إرث الموضة">Fashion Legacy</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="footer-brand" data-en="Duha Al-Khashini" data-ar="ضحى محمد شحادة الخشيني">Duha Al-Khashini</h3>
+                <p class="footer-quote" data-en="Fashion is not just about clothing, it's about expressing your inner beauty and confidence through every thread." data-ar="الموضة ليست مجرد ملابس، بل هي التعبير عن جمالك الداخلي وثقتك من خلال كل خيط.">Fashion is not just about clothing, it's about expressing your inner beauty and confidence through every thread.</p>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h4 class="footer-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#bridal-collection" data-en="Bridal" data-ar="العرائس">Bridal</a></li>
+                    <li><a href="#luxury-collection" data-en="Luxury & Modest" data-ar="الفاخرة والمحتشمة">Luxury & Modest</a></li>
+                    <li><a href="#blazer-collection" data-en="Blazer Abaya" data-ar="البليزر عباية">Blazer Abaya</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h4 class="footer-title" data-en="Connect With Me" data-ar="تواصل معي">Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/duh_amohammad" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/duha-mohammad-1993b9284" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/97470920677" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+<!--        <div class="footer-bottom">-->
+<!--            <p data-en="© 2025 Duha Al-Khashini. All rights reserved." data-ar="© 2025 ضحى الخشيني. جميع الحقوق محفوظة.">© 2025 Duha Al-Khashini. All rights reserved.</p>-->
+<!--        </div>-->
+        <div class="footer-bottom">
+            <p data-en="© 2025 SamyJoe. All rights reserved." data-ar="© 2025 SamyJoe. التصميم بواسطة.">Designed By <a href="https://wa.me/201007415843" target="_blank">SamyJoe</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="styles/js/script.js"></script>
+</body>
+</html>
