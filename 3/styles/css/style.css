@@ -153,8 +153,11 @@ body{
     height: 100%;
     object-fit: cover;
     /*filter: blur(2px);*/
-    object-position: center 40%;
+    object-position: left 40%;
     animation: zoomIn 20s ease-in-out infinite alternate;
+}
+[dir="rtl"] .hero-image {
+    object-position: right center;
 }
 
 @keyframes zoomIn {
@@ -227,9 +230,11 @@ body{
     line-height: 1.8;
     letter-spacing: 0.5px;
     animation: slideInRight 1.2s ease-out;
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     margin: 0 auto;
 }
+[dir=rtl] .text-start { text-align: right !important; }
+[dir=rtl] .align-items-start { align-items: flex-end !important; }
 
 @keyframes slideInRight {
     from {
