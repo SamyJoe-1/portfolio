@@ -1046,6 +1046,50 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-right-radius: 0.5rem;
 }
 
+/* Atmosphere Splide — fix arrows overlaying the slider */
+#atmosphereSplide {
+    position: relative;
+}
+
+#atmosphereSplide .splide__arrows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#atmosphereSplide .splide__arrow {
+    pointer-events: all;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.55) !important;
+    border-radius: 50%;
+    opacity: 1 !important;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#atmosphereSplide .splide__arrow--prev { left: 15px;transform: rotate(180deg) }
+#atmosphereSplide .splide__arrow--next { right: 15px; }
+
+#atmosphereSplide .splide__arrow svg {
+    fill: #fff;
+    width: 18px;
+    height: 18px;
+}
+
+#atmosphereSplide .splide__arrow:hover {
+    background: rgba(0, 0, 0, 0.85) !important;
+}
+
 /* Responsive */
 @media (max-width: 991px) {
     .hero-title {
