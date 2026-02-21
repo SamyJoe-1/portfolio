@@ -585,7 +585,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(212, 175, 55, 0.9);
+    /*background: rgba(212, 175, 55, 0.9);*/
+    background: rgba(212, 175, 55, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1031,6 +1032,18 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top:hover {
     background: var(--dark-gold);
     transform: translateY(-5px);
+}
+.rounded-top-left-3 {
+    border-top-left-radius: 0.5rem;
+}
+.rounded-top-right-3 {
+    border-top-right-radius: 0.5rem;
+}
+.rounded-bottom-left-3 {
+    border-bottom-left-radius: 0.5rem;
+}
+.rounded-bottom-right-3 {
+    border-bottom-right-radius: 0.5rem;
 }
 
 /* Responsive */
