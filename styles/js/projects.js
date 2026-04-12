@@ -38,7 +38,7 @@ const PROJECTS = {
     ffa: {
         title: 'FFA Global',
         subtitle: 'Crypto & Forex Live Market Intelligence Platform',
-        images: ['ffa/1.png', 'ffa/2.png'],
+        images: ['ffa/1.png', 'ffa/2.png', 'ffa/3.png'],
         description: `
             <p>FFA Global is a <strong>financial market intelligence platform</strong> targeting crypto traders and forex investors who need live data and structured education in one place.</p>
             <p>The platform delivers <strong>real-time market prices</strong> across crypto and forex pairs with live chart feeds, giving traders up-to-the-second visibility on the markets they're tracking.</p>
@@ -74,7 +74,7 @@ const PROJECTS = {
     mzglol: {
         title: 'Mzglol',
         subtitle: 'Citizens Disputes & Government Redirecting Platform',
-        images: ['mzglol/1.png', 'mzglol/2.png'],
+        images: ['mzglol/1.png', 'mzglol/2.png', 'mzglol/3.png'],
         description: `
         <p>Mzglol is an <strong>official civic platform</strong> built for MP Mohamed Fouad Zaghloul — giving citizens a direct digital channel to submit their disputes, concerns, and requests to their representative.</p>
         <p>Submissions don't just pile up — the platform <strong>automatically routes each case to the correct ministry</strong> responsible for handling it, ensuring nothing gets lost in bureaucratic dead ends and every complaint lands in the right hands.</p>
@@ -86,7 +86,7 @@ const PROJECTS = {
     boost: {
         title: 'Boost',
         subtitle: 'Gaming Marketplace — Discounted Games, Coins & In-Game Currency',
-        images: ['boost/1.png', 'boost/2.png'],
+        images: ['boost/1.png', 'boost/2.png', 'boost/3.png'],
         description: `
         <p>Boost is a <strong>gaming marketplace platform</strong> operating in the same space as G2A — connecting buyers looking for discounted game keys, coins, V-Bucks, and in-game currency with sellers offering them at competitive prices.</p>
         <p>The platform acts as a <strong>trusted middleman</strong> — guaranteeing the transaction on both ends. Sellers list their inventory, buyers place orders, and Boost ensures the delivery is verified before funds are released, protecting both parties throughout the process.</p>
@@ -128,6 +128,17 @@ document.querySelectorAll('.project-card[data-project]').forEach(card => {
 
         if (projectSwiper) projectSwiper.destroy(true, true);
         projectSwiper = new Swiper('.projectSwiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
             loop: data.images.length > 1,
             pagination: { el: '.swiper-pagination', clickable: true },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }

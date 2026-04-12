@@ -10,6 +10,7 @@
     --text-white:               #ffffff;
     --text-gray:                #8aaec8;
     --text-light-gray:          #4a6e8a;
+    --swiper-theme-color: var(--primary-color);
     --border-secondary:         rgba(255, 255, 255, 0.15);
     --overlay-dark:             rgba(11, 20, 32, 0.95);
     --overlay-dark-solid:       rgba(11, 20, 32, 1);
