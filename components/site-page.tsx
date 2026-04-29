@@ -462,7 +462,6 @@ function AboutSection({ locale }: { locale: Locale }) {
           <VideoDialog
             locale={locale}
             title={locale === "en" ? "SamyJoe intro video" : "فيديو تعريفي لسامي جو"}
-            thumbnail="/assets/images/about/cover.png"
           />
         </Reveal>
       </div>
@@ -1061,9 +1060,7 @@ function SiteFooter({ locale }: { locale: Locale }) {
             height={60}
             className="h-auto w-[184px] md:w-[214px]"
           />
-          <p className="mt-2 text-sm text-white/55">
-            Software Engineer | Freelancer | Graphic Designer | AI & Automation Obsessed
-          </p>
+
         </div>
         <div className="flex flex-wrap items-center gap-3">
           {socialLinks.map((link) => {

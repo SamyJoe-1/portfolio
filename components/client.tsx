@@ -9,7 +9,6 @@ import {
   ExternalLink,
   Mail,
   Menu,
-  Play,
   X
 } from "lucide-react";
 
@@ -183,13 +182,13 @@ export function MobileMenu({
 
       {menu.mounted ? (
         <div
-          className={`fixed inset-0 z-[80] overflow-y-auto px-4 py-4 transition duration-300 lg:hidden ${
+          className={`fixed inset-0 z-[80] flex items-start justify-center _overflow-y-auto px-4 py-4 transition duration-300 lg:hidden ${
             menu.visible ? "bg-ink/80 backdrop-blur-xl" : "bg-ink/0 backdrop-blur-none"
           }`}
           onClick={menu.close}
         >
           <div
-            className={`mx-auto flex min-h-[calc(100vh-2rem)] max-h-[calc(100vh-2rem)] w-full max-w-md flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-[#091320]/95 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] transition duration-300 ${
+            className={`relative w-full max-w-md flex-shrink-0 rounded-[2rem] border border-white/10 bg-[#091320]/95 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] transition duration-300 ${
               menu.visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
             onClick={(event) => event.stopPropagation()}
@@ -214,7 +213,7 @@ export function MobileMenu({
               </button>
             </div>
 
-            <div className="mt-8 grid flex-1 gap-3 overflow-y-auto pb-6 pr-1">
+            <div className="mt-8 grid gap-3 pb-6">
               {navItems.map((item) => (
                 <Link
                   key={item.id}
@@ -231,7 +230,7 @@ export function MobileMenu({
               ))}
             </div>
 
-            <div className="mt-auto grid gap-3 border-t border-white/10 pt-6">
+            <div className="grid gap-3 border-t border-white/10 pt-6">
               <Link className="primary-button justify-center" href={siteConfig.cvPath}>
                 CV / Resume
               </Link>
@@ -247,7 +246,6 @@ export function MobileMenu({
 }
 
 export function VideoDialog({
-  thumbnail,
   locale,
   title
 }: {
@@ -255,77 +253,24 @@ export function VideoDialog({
   locale: Locale;
   title: string;
 }) {
-  const modal = useSmoothPresence(260);
-
-  useEffect(() => {
-    document.body.style.overflow = modal.mounted ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [modal.mounted]);
-
+  void locale;
   return (
-    <>
-      <button
-        type="button"
-        onClick={modal.open}
-        className="group relative block overflow-hidden rounded-[1.75rem] border border-white/10 bg-panel text-start shadow-brand"
-      >
-        <Image
-          src={thumbnail}
-          alt={title}
-          width={760}
-          height={760}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+    <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-panel shadow-brand">
+      <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+        <iframe
+          className="absolute inset-0 h-full w-full"
+          src="https://www.youtube.com/embed/JYz4Gr_dySQ?si=eiWR_fPnq-HKsdk-"
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         />
-        <span className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-brand text-white shadow-brand">
-          <span className="absolute inset-0 rounded-full border border-brand/50 animate-pulse-ring" />
-          <Play className="relative h-8 w-8 fill-current" />
-        </span>
-      </button>
-
-      {modal.mounted ? (
-        <div
-          className={`fixed inset-0 z-[90] px-4 py-10 transition duration-300 ${
-            modal.visible ? "bg-ink/95 backdrop-blur-md" : "bg-ink/0 backdrop-blur-0"
-          }`}
-          onClick={modal.close}
-        >
-          <div
-            className={`mx-auto flex h-full w-full max-w-5xl flex-col transition duration-300 ${
-              modal.visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-            }`}
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <p className="text-sm uppercase tracking-[0.22em] text-brand/80">
-                {locale === "en" ? "Intro Video" : "فيديو تعريفي"}
-              </p>
-              <button
-                type="button"
-                onClick={modal.close}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white"
-                aria-label="Close video"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            <div className="relative flex-1 overflow-hidden rounded-[2rem] border border-white/10 bg-black">
-              <iframe
-                className="h-full w-full"
-                src="https://www.youtube.com/embed/JYz4Gr_dySQ?si=eiWR_fPnq-HKsdk-"
-                title={title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      ) : null}
-    </>
+      </div>
+    </div>
   );
 }
+
 
 export function ProjectGallery({
   locale,
