@@ -1,0 +1,16 @@
+.testimonial-avatar{
+    width: 120px !important;
+    height: 120px !important;
+}
+.lead{
+    font-size: 25px;
+}
+.swal-dark {
+    background: #1a1a2e !important;
+    color: #ffffff !important;
+}
+
+.swal-dark .swal2-title,
+.swal-dark .swal2-html-container {
+    color: #ffffff !important;
+}

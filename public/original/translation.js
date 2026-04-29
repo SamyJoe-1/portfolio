@@ -96,44 +96,7 @@ const translations = {
         'career': 'Career',
         'gallery': 'Gallery',
         'contact-me': 'Contact Me',
-        'rights': '© 2026 All Rights Reserved.',
-
-        // Projects
-        'project-clickshare-title': 'Clickshare',
-        'project-clickshare-subtitle': 'End-to-end dropshipping and logistics platform',
-        'project-clickshare-desc': '<p>Clickshare runs the full cycle from sourcing and stock management to fulfillment, shipping, reports, and profit visibility.</p><p>The platform supports multi-role operations for traders, marketers, warehouse teams, call center agents, and admins with real-time analytics and wallet management.</p><p>It was built and owned solo from architecture through production.</p>',
-
-        'project-crm-title': 'CRM Tasks',
-        'project-crm-subtitle': 'Task management, chat, and internal knowledge system',
-        'project-crm-desc': '<p>A Trello-style workflow product with role-based task management, real-time communication, and secure internal documentation.</p><p>Designed to scale toward AI agent workflows and broader social management operations.</p>',
-
-        'project-ashrat-title': 'Ashrat',
-        'project-ashrat-subtitle': 'Freelance services marketplace',
-        'project-ashrat-desc': '<p>A marketplace product in the same category as Khamsat and Upwork, connecting service providers with project owners.</p><p>Includes proposal flow, dashboards, admin analytics, and end-to-end hiring workflow support.</p>',
-
-        'project-bridge-title': 'Bridge',
-        'project-bridge-subtitle': 'MikroTik and internet network management platform',
-        'project-bridge-desc': '<p>Bridge gives operators remote control over MikroTik-based internet infrastructure with voucher generation, billing flow, and device subscriptions.</p><p>The product also exposes reporting dashboards around sessions, node performance, and renewal operations.</p>',
-
-        'project-mzglol-title': 'Mzglol',
-        'project-mzglol-subtitle': 'Citizen disputes and ministry routing platform',
-        'project-mzglol-desc': '<p>A civic product for MP Mohamed Fouاد Zaghloul that routes citizen cases to the right ministry with role-based access and reporting.</p><p>It turns public complaints into a trackable and measurable workflow.</p>',
-
-        'project-masar-title': 'Massar Connect',
-        'project-masar-subtitle': 'AI-powered recruitment and career management platform',
-        'project-masar-desc': '<p>Masar automates both sides of hiring: candidates improve CVs and receive AI job matching, while HR teams get scoring, ranking, and interview automation.</p><p>The result is a recruitment pipeline that scales processing capacity without adding headcount.</p>',
-
-        'project-ffa-title': 'FFA-Global',
-        'project-ffa-subtitle': 'Crypto and forex intelligence platform',
-        'project-ffa-desc': '<p>A live market platform combining crypto and forex data with premium educational content and subscription-based access.</p><p>Built for users who want market visibility and structured learning in one product.</p>',
-
-        'project-boost-title': 'Boost',
-        'project-boost-subtitle': 'Gaming marketplace for keys and in-game currency',
-        'project-boost-desc': '<p>A buyer and seller marketplace for discounted game keys, coins, and digital inventory with trusted middleman flows.</p><p>The system supports payment processing, order management, and delivery validation.</p>',
-
-        'project-hader-title': 'Hader Clinics',
-        'project-hader-subtitle': 'Doctor discovery and appointment booking platform',
-        'project-hader-desc': '<p>A healthcare booking product connecting patients with doctors through profiles, smart filters, available slots, and reminders.</p><p>It manages the appointment lifecycle cleanly for both patients and clinic teams.</p>'
+        'rights': '© 2026 All Rights Reserved.'
     },
     ar: {
         // Navbar
@@ -232,44 +195,7 @@ const translations = {
         'career': 'المسيرة',
         'gallery': 'المعرض',
         'contact-me': 'تواصل معي',
-        'rights': '© 2026 جميع الحقوق محفوظة.',
-
-        // Projects
-        'project-clickshare-title': 'كليك شير',
-        'project-clickshare-subtitle': 'منصة دروبشيبينغ ولوجستيات متكاملة',
-        'project-clickshare-desc': '<p>تدير Clickshare الدورة الكاملة من التوريد وإدارة المخزون حتى التنفيذ والشحن والتقارير وربحية التشغيل.</p><p>المنصة تدعم أدواراً متعددة للتجار والمسوقين والمخازن وخدمة العملاء والإدارة، مع تحليلات لحظية وإدارة المحفظة المالية.</p><p>تم بناؤها وتطويرها بالكامل بشكل فردي، من المعمارية حتى الإطلاق الفعلي.</p>',
-
-        'project-crm-title': 'نظام المهام CRM',
-        'project-crm-subtitle': 'نظام إدارة مهام ودردشة ومعرفة داخلية',
-        'project-crm-desc': '<p>منتج لإدارة سير العمل شبيه بـ Trello مع إدارة مهام قائمة على الأدوار، وتواصل لحظي، وتوثيق داخلي آمن.</p><p>مصمم للتوسع مستقبلاً باتجاه أتمتة الذكاء الاصطناعي وإدارة العمليات الاجتماعية الأوسع.</p>',
-
-        'project-ashrat-title': 'عشرات',
-        'project-ashrat-subtitle': 'سوق للخدمات الحرة (Freelance)',
-        'project-ashrat-desc': '<p>منصة خدمات حرة في نفس فئة "خمسات" و"مستقل"، تربط أصحاب المشاريع بالمستقلين المهرة.</p><p>تشمل مسار تقديم العروض، لوحات التحكم، تحليلات الإدارة، ودعم كامل لسير عمل التوظيف من البداية للنهاية.</p>',
-
-        'project-bridge-title': 'بريدج',
-        'project-bridge-subtitle': 'منصة لإدارة أجهزة ميكروتيك وشبكات الإنترنت',
-        'project-bridge-desc': '<p>تمنح Bridge المشغلين تحكماً عن بعد في بنية الإنترنت التحتية القائمة على MikroTik مع توليد كروت الشحن، مسار الفوترة، واشتراكات الأجهزة.</p><p>كما توفر المنصة لوحات تقارير حول الجلسات، أداء الشبكة، وعمليات التجديد.</p>',
-
-        'project-mzglol-title': 'مزغلول',
-        'project-mzglol-subtitle': 'منصة لشكاوى المواطنين وتوجيهها للوزارات',
-        'project-mzglol-desc': '<p>منتج مدني للنائب محمد فؤاد زغلول يقوم بتوجيه قضايا المواطنين إلى الوزارة الصحيحة مع صلاحيات قائمة على الأدوار وتقارير مفصلة.</p><p>يحول الشكاوى العامة إلى سير عمل قابل للتتبع والقياس.</p>',
-
-        'project-masar-title': 'مسار كونكت',
-        'project-masar-subtitle': 'منصة توظيف وإدارة مسار مهني مدعومة بالذكاء الاصطناعي',
-        'project-masar-desc': '<p>تؤتمت "مسار" جانبي التوظيف: المرشحون يحسنون سيرهم الذاتية ويحصلون على مطابقة وظائف بالذكاء الاصطناعي، بينما تحصل فرق الموارد البشرية على التقييم والترتيب وأتمتة المقابلات.</p><p>النتيجة هي مسار توظيف يوسع قدرة المعالجة دون الحاجة لزيادة عدد الموظفين.</p>',
-
-        'project-ffa-title': 'FFA-Global',
-        'project-ffa-subtitle': 'منصة ذكاء مالي للعملات الرقمية والفوركس',
-        'project-ffa-desc': '<p>منصة سوق مباشر تجمع بين بيانات العملات الرقمية والفوركس مع محتوى تعليمي مميز ووصول قائم على الاشتراك.</p><p>بنيت للمستخدمين الذين يريدون متابعة السوق والتعلم المنظم في منتج واحد.</p>',
-
-        'project-boost-title': 'بوست',
-        'project-boost-subtitle': 'سوق ألعاب للمفاتيح والعملات الرقمية داخل الألعاب',
-        'project-boost-desc': '<p>سوق للمشترين والبائعين لمفاتيح الألعاب والعملات الرقمية بأسعار مخفضة مع مسارات وسيط موثوق.</p><p>يدعم النظام معالجة المدفوعات، إدارة الطلبات، والتحقق من التسليم.</p>',
-
-        'project-hader-title': 'عيادات حاضر',
-        'project-hader-subtitle': 'منصة لاكتشاف الأطباء وحجز المواعيد',
-        'project-hader-desc': '<p>منتج لحجز الرعاية الصحية يربط المرضى بالأطباء عبر الملفات الشخصية، الفلاتر الذكية، المواعيد المتاحة، والتذكيرات.</p><p>يدير دورة المواعيد بشكل منظم للمرضى وفرق العيادات على حد سواء.</p>'
+        'rights': '© 2026 جميع الحقوق محفوظة.'
     }
 };
 

@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────
+   Google Fonts – loaded via <link> in layout.tsx
+   Oswald (display), Rubik (body), Poppins (alt)
+   ─────────────────────────────────────────────── */
+
+/* ── Base ────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", "Poppins", sans-serif;
+  background-color: #070c12;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(67, 137, 202, 0.35);
+  color: #fff;
+}
+
+/* ── Layout Shell ────────────────────────────── */
+
+.shell {
+  @apply mx-auto w-full max-w-7xl px-5 md:px-8;
+}
+
+.section-shell {
+  @apply relative py-20 md:py-28;
+}
+
+/* ── Typography ──────────────────────────────── */
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.28em] text-brand;
+}
+
+.section-title {
+  @apply font-display text-4xl font-bold uppercase leading-[0.96] text-white sm:text-5xl;
+}
+
+.section-copy {
+  @apply text-base leading-8;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.inline-accent {
+  color: #4389ca;
+}
+
+/* ── Ghost Background Title ──────────────────── */
+
+.ghost-title {
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+/* ── Hero Decorations ────────────────────────── */
+
+.hero-shape {
+  @apply pointer-events-none absolute h-[180px] w-[180px] rounded-full;
+  border: 2px solid rgba(67, 137, 202, 0.15);
+}
+.hero-shape-sm {
+  @apply h-[90px] w-[90px];
+  border: 1px solid rgba(67, 137, 202, 0.1);
+}
+.hero-diamond {
+  @apply pointer-events-none absolute h-[130px] w-[130px];
+  background: rgba(67, 137, 202, 0.08);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.hero-diamond-sm {
+  @apply h-[65px] w-[65px];
+  background: rgba(67, 137, 202, 0.05);
+}
+.hero-dot {
+  @apply pointer-events-none absolute h-3 w-3 rounded-full;
+  background: rgba(67, 137, 202, 0.25);
+}
+.hero-dot-sm {
+  @apply h-2 w-2;
+  background: rgba(67, 137, 202, 0.15);
+}
+
+.hero-underline {
+  border-bottom: 5px solid #4389ca;
+  border-radius: 4px;
+  padding-bottom: 0;
+}
+
+/* ── Buttons ─────────────────────────────────── */
+
+.primary-button {
+  @apply inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-sm font-semibold text-white transition duration-300;
+}
+.primary-button:hover {
+  @apply -translate-y-0.5 shadow-brand;
+  filter: brightness(1.12);
+}
+
+.ghost-button {
+  @apply inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-300;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+}
+.ghost-button:hover {
+  @apply -translate-y-0.5 text-white;
+  border-color: rgba(67, 137, 202, 0.55);
+}
+
+.icon-button {
+  @apply inline-flex h-9 w-9 items-center justify-center rounded-full transition duration-200;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+}
+.icon-button:hover {
+  @apply border-brand text-brand;
+}
+
+/* ── Navigation Pills ────────────────────────── */
+
+.nav-pill {
+  @apply rounded-full px-5 py-2.5 text-sm font-medium transition duration-200;
+  color: rgba(255, 255, 255, 0.8);
+}
+.nav-pill:hover {
+  @apply text-white;
+  background: rgba(255, 255, 255, 0.05);
+}
+.nav-pill-active {
+  @apply text-white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Outline Chip ────────────────────────────── */
+
+.outline-chip {
+  @apply inline-flex rounded-full px-4 py-2 text-sm;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ── Service Card ────────────────────────────── */
+
+@layer components {
+  .service-card {
+    @apply relative overflow-hidden rounded-[1.6rem] p-7 transition duration-500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(17, 28, 40, 0.6);
+  }
+  .service-card:hover {
+    @apply -translate-y-2;
+    border-color: rgba(67, 137, 202, 0.4);
+    background: rgba(17, 28, 40, 0.8);
+  }
+  .service-card::after {
+    content: "";
+    @apply pointer-events-none absolute -bottom-24 -right-24 h-48 w-48 rounded-full opacity-0 transition-all duration-500;
+    background: radial-gradient(circle, #4389ca 0%, transparent 70%);
+  }
+  .service-card:hover::after {
+    @apply -bottom-12 -right-12 opacity-30;
+  }
+}
+
+/* ── Pricing Card ────────────────────────────── */
+
+@layer components {
+  .pricing-card {
+    @apply relative overflow-hidden rounded-[1.6rem] p-8 text-center transition duration-500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(17, 28, 40, 0.6);
+  }
+  .pricing-card:hover {
+    @apply -translate-y-2;
+    border-color: rgba(67, 137, 202, 0.4);
+  }
+  .pricing-card::after {
+    content: "";
+    @apply pointer-events-none absolute -bottom-24 -right-24 h-48 w-48 rounded-full opacity-0 transition-all duration-500;
+    background: radial-gradient(circle, #4389ca 0%, transparent 70%);
+  }
+  .pricing-card:hover::after {
+    @apply -bottom-12 -right-12 opacity-30;
+  }
+  .pricing-card-active {
+    @apply scale-[1.03] bg-brand-gradient text-white;
+    border-color: rgba(67, 137, 202, 0.5);
+  }
+  .pricing-card-active::after {
+    @apply opacity-0;
+  }
+
+  .offer-active-button {
+    @apply bg-white text-slate-950;
+  }
+  .offer-active-button:hover {
+    @apply text-slate-950;
+    background: rgba(255, 255, 255, 0.9);
+    filter: none;
+  }
+}
+
+/* ── Arabic locale helpers ───────────────────── */
+
+.locale-ar {
+  direction: rtl;
+}
+
+.font-arabic {
+  font-family: "Rubik", "Noto Sans Arabic", sans-serif;
+}
+
+/* ── Smooth fade-up on scroll ────────────────── */
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ── Focus ring ──────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid #4389ca;
+  outline-offset: 2px;
+}
+
+/* ── Scrollbar ───────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070c12;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(67, 137, 202, 0.35);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(67, 137, 202, 0.55);
+}
