@@ -838,3 +838,70 @@ export function QuickContactForm({ locale }: { locale: Locale }) {
     </form>
   );
 }
+
+export function AnimatedHeroShapes() {
+  const [shapes, setShapes] = useState<Array<{ id: number; type: 'circle' | 'square' | 'triangle'; size: number; left: number; top: number; tx: number; ty: number; duration: number; delay: number; opacity: number; rotation: number }>>([]);
+
+  useEffect(() => {
+    const types: Array<'circle' | 'square' | 'triangle'> = ['circle', 'square', 'triangle'];
+    const count = Math.floor(Math.random() * 12) + 14; // Random count between 14 and 25
+    const newShapes = [];
+
+    for (let i = 0; i < count; i++) {
+      newShapes.push({
+        id: i,
+        type: types[Math.floor(Math.random() * types.length)],
+        size: Math.floor(Math.random() * 24) + 16, // 16px to 40px
+        left: Math.floor(Math.random() * 95), // 0% to 95%
+        top: Math.floor(Math.random() * 95), // 0% to 95%
+        tx: (Math.random() - 0.5) * 500, // Move around randomly up to 250px each way
+        ty: (Math.random() - 0.5) * 500,
+        duration: Math.floor(Math.random() * 20) + 20, // 20s to 40s
+        delay: Math.random() * -30, // Negative delay so they start immediately at different points
+        opacity: (Math.random() * 0.3) + 0.1, // 0.1 to 0.4
+        rotation: Math.random() * 360 // Random initial rotation
+      });
+    }
+    setShapes(newShapes);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      {shapes.map((shape) => {
+        const style = {
+          left: `${shape.left}%`,
+          top: `${shape.top}%`,
+          opacity: shape.opacity,
+          width: `${shape.size}px`,
+          height: `${shape.size}px`,
+          '--tx': `${shape.tx}px`,
+          '--ty': `${shape.ty}px`,
+          '--rot': `${shape.rotation}deg`,
+          animation: `hero-random-move ${shape.duration}s ease-in-out ${shape.delay}s infinite alternate`
+        } as React.CSSProperties;
+
+        const svgProps = {
+          viewBox: "0 0 24 24",
+          fill: "none",
+          stroke: "currentColor",
+          strokeWidth: "1.5",
+          className: "w-full h-full text-brand"
+        };
+
+        return (
+          <div key={shape.id} className="absolute text-brand" style={style}>
+            {shape.type === 'circle' && (
+              <svg {...svgProps}><circle cx="12" cy="12" r="10" /></svg>
+            )}
+            {shape.type === 'square' && (
+              <svg {...svgProps}><rect x="3" y="3" width="18" height="18" rx="2" /></svg>
+            )}
+            {shape.type === 'triangle' && (
+              <svg {...svgProps}><polygon points="12 3 21 19 3 19" strokeLinejoin="round" /></svg>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}

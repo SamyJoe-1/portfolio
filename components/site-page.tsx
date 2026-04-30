@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import {
+  AnimatedHeroShapes,
   ArticleScroller,
   AnimatedMetric,
   DocumentLanguageSync,
@@ -358,16 +359,7 @@ function HeroSection({ locale }: { locale: Locale }) {
 
   return (
     <section id="home" className="section-shell relative overflow-hidden pt-10 md:pt-16">
-      <div className="hero-shape animate-space-float-1 right-[8%] top-[14%]" />
-      <div className="hero-diamond animate-space-float-2 left-[8%] top-[56%]" />
-      <div className="hero-shape hero-shape-sm animate-space-float-3 left-[36%] top-[20%]" />
-      <div className="hero-dot animate-space-float-2 right-[18%] top-[42%]" />
-      <div className="hero-dot hero-dot-sm animate-space-float-1 left-[14%] top-[28%]" />
-      <div className="hero-diamond hero-diamond-sm animate-space-float-3 right-[42%] top-[72%]" />
-      <div className="hero-shape hero-shape-sm animate-space-float-2 left-[72%] top-[12%]" />
-      <div className="hero-dot animate-space-float-3 left-[58%] top-[78%]" />
-      <div className="hero-dot hero-dot-sm animate-space-float-2 right-[32%] top-[18%]" />
-      <div className="hero-diamond hero-diamond-sm animate-space-float-1 left-[24%] top-[74%]" />
+      <AnimatedHeroShapes />
 
       <div className="shell grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal>
