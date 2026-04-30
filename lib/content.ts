@@ -395,14 +395,15 @@ export const projects = [
       "/assets/images/projects/clickshare/5.png"
     ],
     subtitle: {
-      en: "End-to-end dropshipping and logistics platform",
+      en: "End-to-End Dropshipping & Logistics Platform",
       ar: "منصة dropshipping ولوجستيات متكاملة"
     },
     description: {
       en: [
-        "Clickshare runs the full cycle from sourcing and stock management to fulfillment, shipping, reports, and profit visibility.",
-        "The platform supports multi-role operations for traders, marketers, warehouse teams, call center agents, and admins with real-time analytics and wallet management.",
-        "It was built and owned solo from architecture through production."
+        "Clickshare is a full-cycle dropshipping and logistics platform that owns the entire pipeline — from sourcing and stocking products all the way to order fulfillment, shipping, and exporting profit reports.",
+        "The system is built around multi-role architecture: marketers focus solely on generating leads while the platform handles everything else — warehouse operations, agent workflows, call center management, logistics coordination, and financial tracking via an integrated wallet system.",
+        "Key highlights include real-time analytics dashboards giving traders and marketers full visibility into sales performance, stock levels, and fulfillment status — plus a competitive reports engine that directly drives sharper business decisions and measurable revenue growth across active merchants.",
+        "Built and owned solo as the sole engineer — from architecture through production."
       ],
       ar: [
         "تدير Clickshare الدورة الكاملة من sourcing وإدارة المخزون حتى fulfillment والشحن والتقارير وربحية التشغيل.",
@@ -410,15 +411,7 @@ export const projects = [
         "تم بناؤها وتملكها بالكامل بشكل فردي، من المعمارية حتى الإطلاق الفعلي."
       ]
     },
-    tags: [
-      "PHP",
-      "Laravel",
-      "Livewire",
-      "MySQL",
-      "Tailwind CSS",
-      "Pusher",
-      "RESTful API"
-    ]
+    tags: ['PHP', 'Laravel', 'Livewire', 'MySQL', 'Pusher', 'Tailwind CSS', 'Bootstrap', 'Vite', 'RESTful API', 'Cron Jobs', 'WhatsApp Notifications', 'Role-Based Access Control']
   },
   {
     slug: "crm",
@@ -432,20 +425,22 @@ export const projects = [
       "/assets/images/projects/crm/5.png"
     ],
     subtitle: {
-      en: "Task management, chat, and internal knowledge system",
+      en: "All-in-One Task Management, Chat & Knowledge Hub",
       ar: "نظام مهام ودردشة ومعرفة داخلية"
     },
     description: {
       en: [
-        "A Trello-style workflow product with role-based task management, real-time communication, and secure internal documentation.",
-        "Designed to scale toward AI agent workflows and broader social management operations."
+        "CRM Tasks is an all-in-one productivity platform built to evolve into a full social media and AI agent management tool — currently delivering a production-grade task and knowledge management system.",
+        "At its core it's a Trello-style board system with role-based workflow management, letting teams create, assign, and track tasks across boards with full pipeline visibility. It also includes a documents and secret vault section where teams can store internal docs, credentials, and sensitive information securely.",
+        "The platform features real-time chat powered by Pusher for instant team communication, and a reports module that surfaces performance insights across tasks and team activity.",
+        "Built solo from zero — designed with scalability in mind to support AI agent integrations and social media management as next phases."
       ],
       ar: [
         "منتج workflow شبيه بـ Trello مع role-based task management ودردشة لحظية وتوثيق داخلي آمن.",
         "تم تصميمه ليتوسع لاحقًا باتجاه AI agent workflows وإدارة عمليات أوسع."
       ]
     },
-    tags: ["PHP", "Laravel", "Pusher", "MySQL", "Bootstrap", "JavaScript"]
+    tags: ['PHP', 'Laravel', 'Pusher', 'MySQL', 'Bootstrap', 'JavaScript', 'jQuery', 'Real-Time Events', 'Role-Based Access', 'Reporting']
   },
   {
     slug: "bridge",
@@ -459,27 +454,22 @@ export const projects = [
       "/assets/images/projects/bridge/5.png"
     ],
     subtitle: {
-      en: "MikroTik and internet network management platform",
+      en: "MikroTik & Internet Network Management Platform",
       ar: "منصة لإدارة MikroTik وشبكات الإنترنت"
     },
     description: {
       en: [
-        "Bridge gives operators remote control over MikroTik-based internet infrastructure with voucher generation, billing flow, and device subscriptions.",
-        "The product also exposes reporting dashboards around sessions, node performance, and renewal operations."
+        "Bridge is a mission-critical network management platform designed for ISPs, cafés, and large venues that run MikroTik-based internet infrastructure.",
+        "Clients connect their MikroTik device to the platform and instantly hand over full remote control — Bridge takes it from there. The system generates internet voucher cards with custom configurations, bandwidth limits, and expiry settings, which the venue owner can sell directly to end users.",
+        "The platform handles the full subscription lifecycle of connected devices — installation management, renewal tracking, expiry alerts, and multi-device coordination across large deployments handling 200–500 active client devices.",
+        "Operators get access to deep reporting dashboards covering device performance, revenue per node, active sessions, and fulfillment history — giving full operational visibility at scale."
       ],
       ar: [
         "تمنح Bridge المشغلين تحكمًا عن بُعد في بنية الإنترنت المبنية على MikroTik، مع voucher generation وbilling flow وdevice subscriptions.",
         "كما توفر dashboards للتقارير حول الجلسات وأداء العقد وعمليات التجديد."
       ]
     },
-    tags: [
-      "Laravel",
-      "MySQL",
-      "Bootstrap",
-      "jQuery",
-      "FreeRadius",
-      "SSH/CLI"
-    ]
+    tags: ['Laravel', 'MySQL', 'Bootstrap', 'jQuery', 'FreeRadius', 'SSH/CLI', 'MikroTik API', 'Cron Jobs', 'Network Management', 'Reporting']
   },
   {
     slug: "ashrat",
@@ -491,20 +481,22 @@ export const projects = [
       "/assets/images/projects/ashrat/3.png"
     ],
     subtitle: {
-      en: "Freelance services marketplace",
+      en: "Freelance Services Marketplace",
       ar: "منصة marketplace للخدمات الحرة"
     },
     description: {
       en: [
-        "A marketplace product in the same category as Khamsat and Upwork, connecting service providers with project owners.",
-        "Includes proposal flow, dashboards, admin analytics, and end-to-end hiring workflow support."
+        "Ashrat is a full freelance services marketplace — a branded platform in the vein of Khamsat, Mostaql, and Upwork — connecting project owners with skilled freelancers across service categories.",
+        "The platform supports the full application and hiring workflow: freelancers list their services, project owners post requirements, and the system manages proposals, negotiations, and project assignment end-to-end.",
+        "Both sides get dedicated dashboards — freelancers track their active gigs, earnings, and reviews while clients manage posted projects, incoming proposals, and hiring decisions. An analytics layer surfaces platform-wide activity and performance metrics for admins.",
+        "Built solo from zero under a new brand identity — architected to scale as an independent marketplace with its own user base."
       ],
       ar: [
         "منتج marketplace في نفس مساحة Khamsat وUpwork لربط مقدمي الخدمات بأصحاب المشاريع.",
         "يشمل proposal flow وdashboards وadmin analytics ودعم دورة التوظيف كاملة."
       ]
     },
-    tags: ["Laravel", "MySQL", "Bootstrap", "Marketplace", "Analytics"]
+    tags: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Role-Based Dashboards', 'Workflow Management', 'Analytics', 'Freelance Marketplace']
   },
   {
     slug: "masar",
@@ -519,20 +511,22 @@ export const projects = [
       "/assets/images/projects/masar/6.png"
     ],
     subtitle: {
-      en: "AI-powered recruitment and career management platform",
+      en: "AI-Powered Recruitment & Career Management Platform",
       ar: "منصة توظيف وإدارة مسار مهني مدعومة بالذكاء الاصطناعي"
     },
     description: {
       en: [
-        "Masar automates both sides of hiring: candidates improve CVs and receive AI job matching, while HR teams get scoring, ranking, and interview automation.",
-        "The result is a recruitment pipeline that scales processing capacity without adding headcount."
+        "Masar Connect is an end-to-end AI-driven recruitment platform that eliminates human bottlenecks from both sides of the hiring process — candidates and HR teams operate in fully automated workflows.",
+        "On the candidate side: users build and improve their CVs directly in the platform, run ATS compatibility checks to score their CV against real job requirements, and let the AI match them to relevant job listings automatically — no manual searching required.",
+        "On the HR side: recruiters get a dashboard that processes dozens of CVs in one shot — AI parses, scores, and ranks applicants against the job criteria, then conducts automated interviews with shortlisted candidates. Zero human hand in the screening pipeline.",
+        "The result is a system where candidate processing capacity scales without adding headcount — the entire pipeline from application to interview runs on AI automation end-to-end."
       ],
       ar: [
         "تؤتمت Masar جانبي التوظيف: المرشح يحسن الـ CV ويحصل على AI job matching، وفرق HR تحصل على scoring وranking وinterview automation.",
         "النتيجة هي recruitment pipeline يمكنها التوسع بدون زيادة headcount."
       ]
     },
-    tags: ["Laravel", "MySQL", "N8N", "OpenAI API", "AI Automation"]
+    tags: ['Laravel', 'MySQL', 'N8N', 'OpenAI API', 'Bootstrap', 'JavaScript', 'AI Automation', 'CV Parsing', 'ATS Scoring', 'Job Matching', 'Automated Interviews']
   },
   {
     slug: "ffa",
@@ -544,20 +538,22 @@ export const projects = [
       "/assets/images/projects/ffa/3.png"
     ],
     subtitle: {
-      en: "Crypto and forex intelligence platform",
+      en: "Crypto & Forex Live Market Intelligence Platform",
       ar: "منصة معلومات وتعلم للأسواق المالية"
     },
     description: {
       en: [
-        "A live market platform combining crypto and forex data with premium educational content and subscription-based access.",
-        "Built for users who want market visibility and structured learning in one product."
+        "FFA Global is a financial market intelligence platform targeting crypto traders and forex investors who need live data and structured education in one place.",
+        "The platform delivers real-time market prices across crypto and forex pairs with live chart feeds, giving traders up-to-the-second visibility on the markets they're tracking.",
+        "Beyond live data, it features a premium courses section — locked behind a subscription — covering trading strategies, technical analysis, and forex fundamentals. Access is tiered so free users get market data while premium members unlock the full educational content library.",
+        "Built to serve an audience that wants both market monitoring and skill-building under one roof, without jumping between platforms."
       ],
       ar: [
         "منصة live market تجمع بيانات crypto وforex مع محتوى تعليمي مدفوع وsubscription access.",
         "تم بناؤها للمستخدمين الذين يريدون market visibility وتعلمًا منظمًا داخل منتج واحد."
       ]
     },
-    tags: ["Laravel", "MySQL", "Live Market API", "Subscriptions", "Fintech"]
+    tags: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Live Market API', 'Subscription System', 'Premium Access Control', 'Crypto', 'Forex']
   },
   {
     slug: "mzglol",
@@ -569,20 +565,22 @@ export const projects = [
       "/assets/images/projects/mzglol/3.png"
     ],
     subtitle: {
-      en: "Citizen disputes and ministry routing platform",
+      en: "Citizens Disputes & Government Redirecting Platform",
       ar: "منصة شكاوى مواطنين وتوجيه للوزارات"
     },
     description: {
       en: [
-        "A civic product for MP Mohamed Fouad Zaghloul that routes citizen cases to the right ministry with role-based access and reporting.",
-        "It turns public complaints into a trackable and measurable workflow."
+        "Mzglol is an official civic platform built for MP Mohamed Fouad Zaghloul — giving citizens a direct digital channel to submit their disputes, concerns, and requests to their representative.",
+        "Submissions don't just pile up — the platform automatically routes each case to the correct ministry responsible for handling it, ensuring nothing gets lost in bureaucratic dead ends and every complaint lands in the right hands.",
+        "Ministries operate under role-based access control — each ministry sees and manages only the cases assigned to their jurisdiction, keeping operations clean and accountable across departments.",
+        "A full reporting layer gives the MP and admins complete visibility into submission volumes, case statuses, ministry response rates, and resolution tracking — turning citizen engagement into measurable governance data."
       ],
       ar: [
         "منتج civic للنائب محمد فؤاد زغلول يوجه شكاوى المواطنين إلى الوزارة المناسبة مع role-based access وتقارير تشغيلية.",
         "المنصة تحول الشكاوى العامة إلى workflow قابل للمتابعة والقياس."
       ]
     },
-    tags: ["Laravel", "MySQL", "Civic Tech", "Reporting", "Role-Based Access"]
+    tags: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Role-Based Access', 'Government Platform', 'Case Routing', 'Reporting', 'Civic Tech']
   },
   {
     slug: "boost",
@@ -594,20 +592,22 @@ export const projects = [
       "/assets/images/projects/boost/3.png"
     ],
     subtitle: {
-      en: "Gaming marketplace for keys and in-game currency",
+      en: "Gaming Marketplace — Discounted Games, Coins & In-Game Currency",
       ar: "Marketplace للألعاب والعملات الرقمية داخل الألعاب"
     },
     description: {
       en: [
-        "A buyer and seller marketplace for discounted game keys, coins, and digital inventory with trusted middleman flows.",
-        "The system supports payment processing, order management, and delivery validation."
+        "Boost is a gaming marketplace platform operating in the same space as G2A — connecting buyers looking for discounted game keys, coins, V-Bucks, and in-game currency with sellers offering them at competitive prices.",
+        "The platform acts as a trusted middleman — guaranteeing the transaction on both ends. Sellers list their inventory, buyers place orders, and Boost ensures the delivery is verified before funds are released, protecting both parties throughout the process.",
+        "The system handles payment processing, order management, and conversion guarantees — giving buyers confidence they'll receive what they paid for and giving sellers a reliable channel to move their inventory at scale.",
+        "Built to support multiple game titles and currency types under one unified storefront with a clean buyer and seller experience."
       ],
       ar: [
         "Marketplace للمشترين والبائعين لبيع game keys وcoins وdigital inventory بآليات trusted middleman.",
         "النظام يدعم payment processing وorder management والتحقق من التسليم."
       ]
     },
-    tags: ["Laravel", "MySQL", "Payment Integration", "Marketplace", "Gaming"]
+    tags: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Payment Integration', 'Marketplace', 'Escrow System', 'Order Management', 'Gaming']
   },
   {
     slug: "hader",
@@ -615,20 +615,22 @@ export const projects = [
     image: "/assets/images/projects/9.png",
     gallery: ["/assets/images/projects/hader/1.png"],
     subtitle: {
-      en: "Doctor discovery and appointment booking platform",
+      en: "Doctor Discovery & Appointment Booking Platform",
       ar: "منصة لاكتشاف الأطباء وحجز المواعيد"
     },
     description: {
       en: [
-        "A healthcare booking product connecting patients with doctors through profiles, smart filters, available slots, and reminders.",
-        "It manages the appointment lifecycle cleanly for both patients and clinic teams."
+        "Hader Clinics is a doctor discovery and booking platform — operating in the same space as Vezeeta — connecting patients with the right doctor without the phone calls and guesswork.",
+        "Each doctor has a dedicated profile showcasing their specialty, experience, clinic location, available slots, and patient reviews — giving users everything they need to make an informed decision before booking.",
+        "Patients use smart filters to narrow down by specialty, location, availability, and rating — finding their most suitable doctor quickly and scheduling an appointment directly through the platform.",
+        "The system manages the full appointment lifecycle — booking, confirmation, reminders, and scheduling management on the doctor's side — keeping both patients and clinics organized with zero friction."
       ],
       ar: [
         "منتج healthcare booking يربط المرضى بالأطباء عبر profiles وsmart filters ومواعيد متاحة وتذكيرات.",
         "يدير دورة الحجز بشكل منظم لكل من المرضى وفرق العيادات."
       ]
     },
-    tags: ["Laravel", "MySQL", "Scheduling", "Healthcare", "Doctor Profiles"]
+    tags: ['Laravel', 'MySQL', 'Bootstrap', 'JavaScript', 'Appointment Booking', 'Doctor Profiles', 'Smart Filters', 'Scheduling System', 'Healthcare']
   }
 ];
 
