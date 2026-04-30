@@ -252,27 +252,59 @@ export function MobileMenu({
 
 export function VideoDialog({
   locale,
-  title
+  title,
+  thumbnail
 }: {
   thumbnail: string;
   locale: Locale;
   title: string;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
   void locale;
+
   return (
-    <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-panel shadow-brand">
-      <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-        <iframe
-          className="absolute inset-0 h-full w-full"
-          src="https://www.youtube.com/embed/JYz4Gr_dySQ?si=eiWR_fPnq-HKsdk-"
-          title={title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      </div>
-    </div>
+    <>
+      <button 
+        type="button" 
+        onClick={() => setIsOpen(true)}
+        className="group relative w-full max-w-[600px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-panel shadow-brand transition duration-500 hover:shadow-brand-glow lg:min-w-[480px]"
+      >
+        <div className="relative w-full" style={{ paddingBottom: "75%" }}>
+          <Image src={thumbnail} alt={title} fill className="object-cover transition duration-700 group-hover:scale-105" />
+          <div className="absolute inset-0 bg-ink/40 transition duration-500 group-hover:bg-ink/20" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand text-white shadow-lg transition duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8 ml-1">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </button>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/90 p-4 backdrop-blur-sm" onClick={() => setIsOpen(false)}>
+          <div className="relative w-full max-w-4xl overflow-hidden rounded-[1.75rem] border border-white/10 bg-panel shadow-2xl" onClick={e => e.stopPropagation()}>
+            <div className="absolute right-0 top-0 z-10 flex justify-end p-4">
+              <button type="button" onClick={() => setIsOpen(false)} className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/JYz4Gr_dySQ?si=eiWR_fPnq-HKsdk-&autoplay=1"
+                title={title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -458,11 +458,11 @@ function AboutSection({ locale }: { locale: Locale }) {
           </div>
         </Reveal>
 
-        <Reveal className="lg:justify-self-end">
+        <Reveal className="lg:justify-self-end w-full max-w-[600px]">
           <VideoDialog
               locale={locale}
               title={locale === "en" ? "SamyJoe intro video" : "فيديو تعريفي لسامي جو"}
-              thumbnail="/your-thumbnail-image.jpg"
+              thumbnail="/assets/images/about/cover.png"
           />
         </Reveal>
       </div>
