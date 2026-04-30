@@ -12,8 +12,8 @@ type PageMeta = {
 export const siteConfig = {
   name: "SamyJoe",
   siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-    "https://samyjoe-1.github.io/portfolio",
+      process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+      "https://samyjoe-1.github.io/portfolio",
   email: "samyjoe01011000@gmail.com",
   phone: "+20 100 741 5843",
   location: "Cairo, Egypt",
@@ -56,7 +56,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     home: {
       title: "SamyJoe | Full-Stack Software Engineer",
       description:
-        "Production-grade systems, zero to live deployment. SamyJoe builds Laravel, PHP, React, Tailwind, DevOps, and AI automation products from Cairo for clients worldwide.",
+          "Production-grade systems, zero to live deployment. SamyJoe builds Laravel, PHP, React, Tailwind, DevOps, and AI automation products from Cairo for clients worldwide.",
       keywords: [
         "SamyJoe portfolio",
         "Full-Stack Software Engineer",
@@ -68,7 +68,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     about: {
       title: "About SamyJoe | Full-Stack Engineer Profile",
       description:
-        "Deep profile of SamyJoe, a software engineer, freelancer, instructor, and automation builder focused on shipping high-impact web systems.",
+          "Deep profile of SamyJoe, a software engineer, freelancer, instructor, and automation builder focused on shipping high-impact web systems.",
       keywords: [
         "About SamyJoe",
         "SamyJoe profile",
@@ -79,7 +79,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     projects: {
       title: "Projects | SamyJoe Portfolio",
       description:
-        "Selected systems built by SamyJoe across dropshipping, recruitment, civic tech, fintech, marketplaces, healthcare, and network management.",
+          "Selected systems built by SamyJoe across dropshipping, recruitment, civic tech, fintech, marketplaces, healthcare, and network management.",
       keywords: [
         "SamyJoe projects",
         "Laravel case studies",
@@ -90,7 +90,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     career: {
       title: "Career | Experience, Services, and Delivery",
       description:
-        "Career timeline, engineering specialties, testimonials, and delivery principles that define how SamyJoe ships production-ready systems.",
+          "Career timeline, engineering specialties, testimonials, and delivery principles that define how SamyJoe ships production-ready systems.",
       keywords: [
         "SamyJoe career",
         "software engineer experience",
@@ -101,7 +101,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     articles: {
       title: "Articles | Engineering Notes and System Breakdowns",
       description:
-        "Topic pages from SamyJoe covering full-stack architecture, AI automation, engineering process, and lessons from real product delivery.",
+          "Topic pages from SamyJoe covering full-stack architecture, AI automation, engineering process, and lessons from real product delivery.",
       keywords: [
         "SamyJoe articles",
         "engineering notes",
@@ -114,7 +114,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     home: {
       title: "سامي جو | مهندس برمجيات Full-Stack",
       description:
-        "بورتفوليو سامي جو: بناء أنظمة Production-grade من الصفر حتى الإطلاق باستخدام Laravel وPHP وReact وTailwind وDevOps وAI Automation.",
+          "بورتفوليو سامي جو: بناء أنظمة Production-grade من الصفر حتى الإطلاق باستخدام Laravel وPHP وReact وTailwind وDevOps وAI Automation.",
       keywords: [
         "سامي جو",
         "مهندس Full-Stack",
@@ -126,7 +126,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     about: {
       title: "عن سامي جو | الملف المهني",
       description:
-        "صفحة تعريفية أعمق عن سامي جو كمطور، فريلانسر، مدرب تقني، وباني حلول Automation وAI.",
+          "صفحة تعريفية أعمق عن سامي جو كمطور، فريلانسر، مدرب تقني، وباني حلول Automation وAI.",
       keywords: [
         "عن سامي جو",
         "الملف المهني",
@@ -137,7 +137,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     projects: {
       title: "المشاريع | أعمال سامي جو",
       description:
-        "استعراض للمشاريع والأنظمة التي بناها سامي جو في التجارة، والتوظيف، والخدمات الحكومية، والصحة، والشبكات، والأسواق الرقمية.",
+          "استعراض للمشاريع والأنظمة التي بناها سامي جو في التجارة، والتوظيف، والخدمات الحكومية، والصحة، والشبكات، والأسواق الرقمية.",
       keywords: [
         "مشاريع سامي جو",
         "أعمال Laravel",
@@ -148,7 +148,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     career: {
       title: "المسيرة | الخبرة والخدمات",
       description:
-        "الخط الزمني للخبرة، والتخصصات الهندسية، وآراء العملاء، وأسلوب التسليم الذي يميز سامي جو.",
+          "الخط الزمني للخبرة، والتخصصات الهندسية، وآراء العملاء، وأسلوب التسليم الذي يميز سامي جو.",
       keywords: [
         "خبرة سامي جو",
         "المسيرة المهنية",
@@ -159,7 +159,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
     articles: {
       title: "المحتوى | ملاحظات هندسية وتقسيمات تقنية",
       description:
-        "صفحات محتوى تلخص خبرة سامي جو في هندسة الأنظمة وAI Automation وطرق بناء المنتجات بشكل production-ready.",
+          "صفحات محتوى تلخص خبرة سامي جو في هندسة الأنظمة وAI Automation وطرق بناء المنتجات بشكل production-ready.",
       keywords: [
         "محتوى سامي جو",
         "مقالات هندسية",
@@ -175,9 +175,9 @@ export const heroContent = {
     eyebrow: "Hi, I'm SamyJoe",
     eyebrowHtml: "Hi, I'm <span class=\"hero-underline\">SamyJoe</span>",
     titleHtml:
-      "Code is not a job. <span class=\"inline-accent\">It's a lifestyle.</span>",
+        "Code is not a job. <span class=\"inline-accent\">It's a lifestyle.</span>",
     subtitle:
-      "Full-Stack Software Engineer based in Cairo, Egypt â€” specializing in Laravel, PHP Backend Engineering, RESTful API Design & Linux Server Administration",
+        "Full-Stack Software Engineer based in Cairo, Egypt — specializing in Laravel, PHP Backend Engineering, RESTful API Design & Linux Server Administration",
     primaryCta: "Download CV",
     secondaryCta: "Explore Projects",
     statOne: "4+ years building real products",
@@ -187,9 +187,9 @@ export const heroContent = {
     eyebrow: "أهلًا، أنا SamyJoe",
     eyebrowHtml: "أهلًا، أنا <span class=\"hero-underline\">SamyJoe</span>",
     titleHtml:
-      "الكود ليس مجرد وظيفة. <span class=\"inline-accent\">إنه أسلوب حياة.</span>",
+        "الكود ليس مجرد وظيفة. <span class=\"inline-accent\">إنه أسلوب حياة.</span>",
     subtitle:
-      "مهندس برمجيات Full-Stack من القاهرة، مصر — متخصص في Laravel وPHP Backend Engineering وRESTful API Design وLinux Server Administration",
+        "مهندس برمجيات Full-Stack من القاهرة، مصر — متخصص في Laravel وPHP Backend Engineering وRESTful API Design وLinux Server Administration",
     primaryCta: "تحميل الـ CV",
     secondaryCta: "استعراض المشاريع",
     statOne: "4+ سنوات في بناء منتجات حقيقية",
@@ -202,17 +202,17 @@ export const aboutHighlights = {
     eyebrow: "About Me",
     titleHtml: "I'm a <span class=\"inline-accent\">Full-Stack</span> Engineer",
     body:
-      "Proactive and solution-oriented Full-Stack Software Engineer with 4+ years of experience building production-grade web applications from zero to live deployment. Specialties include end-to-end system architecture, Laravel/PHP backend engineering, RESTful API design, Linux server administration, and real-time data dashboards.",
+        "Proactive and solution-oriented Full-Stack Software Engineer with 4+ years of experience building production-grade web applications from zero to live deployment. Specialties include end-to-end system architecture, Laravel/PHP backend engineering, RESTful API design, Linux server administration, and real-time data dashboards.",
     extended:
-      "My edge is not just writing code. It is understanding the full business flow, cutting operational friction, and building systems that teams can actually run and scale."
+        "My edge is not just writing code. It is understanding the full business flow, cutting operational friction, and building systems that teams can actually run and scale."
   },
   ar: {
     eyebrow: "عني",
     titleHtml: "أنا مهندس <span class=\"inline-accent\">Full-Stack</span>",
     body:
-      "مهندس برمجيات Full-Stack استباقي وعملي، أمتلك خبرة تتجاوز 4 سنوات في بناء Web Applications بمستوى Production-grade من الصفر حتى الإطلاق الفعلي. أركز على End-to-end system architecture وLaravel/PHP backend engineering وRESTful API design وLinux server administration ولوحات البيانات اللحظية.",
+        "مهندس برمجيات Full-Stack استباقي وعملي، أمتلك خبرة تتجاوز 4 سنوات في بناء Web Applications بمستوى Production-grade من الصفر حتى الإطلاق الفعلي. أركز على End-to-end system architecture وLaravel/PHP backend engineering وRESTful API design وLinux server administration ولوحات البيانات اللحظية.",
     extended:
-      "القيمة التي أقدمها لا تقتصر على كتابة الكود، بل تمتد إلى فهم الـ business flow بالكامل، وتقليل الاحتكاك داخل العمليات، وبناء أنظمة يمكن للفرق تشغيلها وتوسيعها بثقة."
+        "القيمة التي أقدمها لا تقتصر على كتابة الكود، بل تمتد إلى فهم الـ business flow بالكامل، وتقليل الاحتكاك داخل العمليات، وبناء أنظمة يمكن للفرق تشغيلها وتوسيعها بثقة."
   }
 };
 
@@ -275,7 +275,7 @@ export const experienceItems = [
     company: "Clickshare",
     mode: "Hybrid",
     summary: {
-      en: "Sole engineer behind a multi-role dropshipping and logistics platform with warehouse, marketer, agent, call center, wallet, and analytics modules.",
+      en: "Sole engineer owning a full multi-role dropshipping & logistics platform — traders, marketers, agents, warehouse, call center modules. Engineered real-time analytics, wallet management, role-based access control, and Pusher event system.",
       ar: "المهندس الوحيد خلف منصة dropshipping ولوجستيات متعددة الأدوار، تشمل warehouse وmarketers وagents وcall center وwallet وanalytics."
     }
   },
@@ -295,7 +295,7 @@ export const experienceItems = [
     company: "BlackHorse",
     mode: "Cairo",
     summary: {
-      en: "Designed and taught a full-stack curriculum from scratch, mentoring 50-100 developers and earning Best Instructor recognition.",
+      en: "Designed and delivered a full-stack engineering curriculum from scratch — PHP, Laravel, DB design, Blade, Bootstrap, Tailwind, JS. Mentored 50–100 developers. Awarded Best Instructor.",
       ar: "صممت ودرّست منهج Full-Stack كامل من الصفر، مع إرشاد 50 إلى 100 مطور، والحصول على لقب Best Instructor."
     }
   },
@@ -305,7 +305,7 @@ export const experienceItems = [
     company: "Khamsat, Mostaql, Nafezly, Upwork",
     mode: "Remote",
     summary: {
-      en: "Shipped 20-50 production systems spanning e-commerce, CRMs, booking, dashboards, automation workflows, and integrations.",
+      en: "Delivered 20–50 production-grade projects — e-commerce stores, CRMs, booking platforms, dashboards, and API integrations. Consistent 5-star rating across the Arab region.",
       ar: "سلّمت من 20 إلى 50 نظام Production في مجالات e-commerce وCRMs وbooking وdashboards وautomation workflows وintegrations."
     }
   }
@@ -313,8 +313,8 @@ export const experienceItems = [
 
 export const skillMeters = [
   { label: "Laravel / PHP", value: 90 },
-  { label: "React / Vue", value: 80 },
-  { label: "MySQL / Data Modeling", value: 85 },
+  { label: "Vue.js / React.js", value: 80 },
+  { label: "MySQL / DB Design", value: 85 },
   { label: "DevOps / Linux", value: 80 }
 ];
 
@@ -361,7 +361,7 @@ export const services = [
   },
   {
     title: {
-      en: "Workflow Automation & AI",
+      en: "Workflow Automation & AI Integration",
       ar: "Workflow Automation & AI"
     },
     summary: {
@@ -371,7 +371,7 @@ export const services = [
   },
   {
     title: {
-      en: "Database Architecture",
+      en: "Database Architecture & Data Modeling",
       ar: "Database Architecture"
     },
     summary: {
@@ -634,35 +634,27 @@ export const projects = [
 
 export const testimonials = [
   {
-    name: { en: "Toka T.", ar: "توكا ت." },
-    title: { en: "Khamsat Client", ar: "عميلة على خمسات" },
+    name: { en: "Ahmed R.", ar: "أحمد ر." },
+    title: { en: "Cairo, Egypt — Freelance Client", ar: "القاهرة، مصر — عميل فريلانس" },
     quote: {
-      en: "One of the best people I've worked with — creative, experienced, fast, and fair pricing. Thank you, Samy.",
-      ar: "من أفضل الأشخاص الذين عملت معهم؛ مبدع، صاحب خبرة، سريع، وتسعيره عادل. شكرًا لك يا سامي."
+      en: "Samy delivered the full system solo — clean architecture, zero bugs on delivery, handled every edge case we threw at him. Exactly what we needed.",
+      ar: "سامي سلّم النظام كاملاً بمفرده — معمارية نظيفة، صفر أخطاء عند التسليم، وتعامل مع كل حالة طرحناها عليه. بالضبط ما كنا نحتاجه."
     }
   },
   {
-    name: { en: "Ahmed A.", ar: "أحمد أ." },
-    title: { en: "Khamsat Client", ar: "عميل على خمسات" },
+    name: { en: "Mohammed K.", ar: "محمد ك." },
+    title: { en: "Saudi Arabia — Mostaql Client", ar: "السعودية — عميل على مستقل" },
     quote: {
-      en: "All gratitude to Samy for his dedication — delivered exactly what was required with high precision. Honored to have worked with him, and will definitely be back.",
-      ar: "كل الشكر لسامي على التزامه؛ سلّم المطلوب بدقة عالية واحترافية واضحة. سعدت بالتعامل معه، وبالتأكيد سأعود إليه مرة أخرى."
+      en: "Fast, professional, communicates clearly throughout. The Laravel system he built handles our full operations — highly recommended.",
+      ar: "سريع، محترف، تواصله واضح طوال المشروع. نظام Laravel الذي بناه يدير عملياتنا بالكامل — أنصح به بشدة."
     }
   },
   {
-    name: { en: "Mohammed A.", ar: "محمد أ." },
-    title: { en: "Repeat Client", ar: "عميل متكرر" },
+    name: { en: "Khaled T.", ar: "خالد ت." },
+    title: { en: "Egypt — Repeat Client via Khamsat", ar: "مصر — عميل متكرر عبر خمسات" },
     quote: {
-      en: "Third time working together — and he still goes beyond what's asked, adding extras on his own. Thank you engineer Samy, this won't be the last.",
-      ar: "هذه ثالث مرة نعمل فيها معًا، وما زال يقدم أكثر من المطلوب ويضيف قيمة من عنده. شكرًا لك مهندس سامي، وبإذن الله لن تكون الأخيرة."
-    }
-  },
-  {
-    name: { en: "Manar A.", ar: "منار أ." },
-    title: { en: "Khamsat Client", ar: "عميلة على خمسات" },
-    quote: {
-      en: "Samy is creative in both programming and design — patient, fast to respond and deliver. I recommend everyone to work with him without hesitation.",
-      ar: "سامي مبدع في البرمجة والتصميم معًا؛ صبور، سريع في الرد، وسريع في التنفيذ. أنصح أي شخص بالعمل معه دون تردد."
+      en: "He doesn't just write code — he understands the business logic and builds accordingly. Came back 3 times already. Won't go anywhere else.",
+      ar: "لا يكتفي بكتابة الكود — يفهم منطق العمل ويبني بناءً على ذلك. عدت إليه 3 مرات بالفعل، ولن أذهب لأي مكان آخر."
     }
   }
 ];
@@ -739,34 +731,34 @@ export const faqItems = {
     {
       question: "Who is SamyJoe?",
       answer:
-        "SamyJoe is a full-stack software engineer from Cairo who works as a freelancer, technical instructor, and builder of production-grade systems across Laravel, PHP, React, Tailwind, DevOps, and AI automation."
+          "SamyJoe is a full-stack software engineer from Cairo who works as a freelancer, technical instructor, and builder of production-grade systems across Laravel, PHP, React, Tailwind, DevOps, and AI automation."
     },
     {
       question: "What kind of work does SamyJoe deliver?",
       answer:
-        "He builds business systems end to end: APIs, dashboards, marketplaces, logistics platforms, automation pipelines, and multi-role internal tools designed for real operations."
+          "He builds business systems end to end: APIs, dashboards, marketplaces, logistics platforms, automation pipelines, and multi-role internal tools designed for real operations."
     },
     {
       question: "Why is this portfolio AI-agent friendly?",
       answer:
-        "Because it includes static profile pages, structured metadata, FAQ content, sitemap support, and an llms.txt endpoint that helps AI systems understand the profile, services, and key projects quickly."
+          "Because it includes static profile pages, structured metadata, FAQ content, sitemap support, and an llms.txt endpoint that helps AI systems understand the profile, services, and key projects quickly."
     }
   ],
   ar: [
     {
       question: "من هو SamyJoe؟",
       answer:
-        "SamyJoe هو مهندس برمجيات Full-Stack من القاهرة، يعمل كفريلانسر ومدرب تقني، ويركز على بناء أنظمة Production-grade باستخدام Laravel وPHP وReact وTailwind وDevOps وAI Automation."
+          "SamyJoe هو مهندس برمجيات Full-Stack من القاهرة، يعمل كفريلانسر ومدرب تقني، ويركز على بناء أنظمة Production-grade باستخدام Laravel وPHP وReact وTailwind وDevOps وAI Automation."
     },
     {
       question: "ما نوع الأعمال التي يقدمها SamyJoe؟",
       answer:
-        "يبني أنظمة أعمال متكاملة من البداية إلى النهاية: APIs وdashboards وmarketplaces ومنصات لوجستية وautomation pipelines وأدوات داخلية متعددة الأدوار تخدم التشغيل الحقيقي."
+          "يبني أنظمة أعمال متكاملة من البداية إلى النهاية: APIs وdashboards وmarketplaces ومنصات لوجستية وautomation pipelines وأدوات داخلية متعددة الأدوار تخدم التشغيل الحقيقي."
     },
     {
       question: "لماذا هذا البورتفوليو مناسب لـ AI agents؟",
       answer:
-        "لأنه يتضمن صفحات تعريفية ثابتة وstructured metadata وFAQ وsitemap وendpoint باسم llms.txt يساعد أنظمة الذكاء الاصطناعي على فهم الملف الشخصي والخدمات وأهم المشاريع بسرعة."
+          "لأنه يتضمن صفحات تعريفية ثابتة وstructured metadata وFAQ وsitemap وendpoint باسم llms.txt يساعد أنظمة الذكاء الاصطناعي على فهم الملف الشخصي والخدمات وأهم المشاريع بسرعة."
     }
   ]
 };
