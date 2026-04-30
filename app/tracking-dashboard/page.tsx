@@ -36,7 +36,7 @@ export default function TrackingDashboard() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/tracking-data", {
+      const res = await fetch("/api/dashboard-data", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password: pwd }),
