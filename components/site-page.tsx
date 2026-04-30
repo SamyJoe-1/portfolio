@@ -305,14 +305,22 @@ function SiteHeader({
 
       <header className="sticky top-0 z-50 border-b border-white/8 bg-ink/85 backdrop-blur-xl">
         <div className="shell flex items-center justify-between gap-4 py-4">
-          <Link href={getPath(locale, "home")} className="flex items-center">
+          <Link href={getPath(locale, "home")} className="flex items-center relative">
             <Image
               src="/assets/images/main/logo.png"
               alt="SamyJoe logo"
               width={220}
               height={60}
               priority
-              className="h-auto w-[194px] md:w-[228px]"
+              className="logo-dark h-auto w-[194px] md:w-[228px]"
+            />
+            <Image
+              src="/assets/images/main/logo-light.png"
+              alt="SamyJoe logo"
+              width={220}
+              height={60}
+              priority
+              className="logo-light absolute left-0 top-1/2 -translate-y-1/2 h-auto w-[194px] md:w-[228px] opacity-0 pointer-events-none"
             />
           </Link>
 
@@ -496,7 +504,7 @@ function CareerSection({
           {experienceItems.map((item, index) => (
             <Reveal
               key={`${item.company}-${item.period}`}
-              className={`rounded-[1.5rem] border border-white/10 p-6 transition duration-500 hover:-translate-y-2 hover:border-brand/40 hover:bg-panel/65 ${
+              className={`career-card rounded-[1.5rem] border border-white/10 p-6 transition duration-500 hover:-translate-y-2 hover:border-brand/40 hover:bg-panel/65 ${
                 index % 2 === 0 ? "bg-panel/35" : "bg-transparent"
               }`}
             >

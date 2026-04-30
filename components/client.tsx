@@ -271,7 +271,7 @@ export function VideoDialog({
       >
         <div className="relative w-full" style={{ paddingBottom: "75%" }}>
           <Image src={thumbnail} alt={title} fill className="object-cover transition duration-700 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-ink/40 transition duration-500 group-hover:bg-ink/20" />
+          <div className="video-overlay absolute inset-0 bg-ink/40 transition duration-500 group-hover:bg-ink/20" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand text-white shadow-lg transition duration-500 group-hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8 ml-1">
@@ -671,7 +671,7 @@ export function TestimonialsCarousel({
             type="button"
             onClick={() => setIndex(itemIndex)}
             className={`h-2.5 rounded-full transition ${
-              itemIndex === index ? "w-8 bg-brand" : "w-2.5 bg-white/20"
+              itemIndex === index ? "w-8 bg-brand" : "w-2.5 bg-white/20 testimonial-dot-inactive"
             }`}
             aria-label={`Go to testimonial ${itemIndex + 1}`}
           />

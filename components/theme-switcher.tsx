@@ -44,6 +44,9 @@ export function ThemeSwitcher() {
       {/* Main capsule */}
       <div
         className={`theme-switcher-capsule ${hovered ? "theme-capsule-expanded" : ""} ${isDark ? "theme-capsule-dark" : "theme-capsule-light"}`}
+        onClick={() => {
+          if (hovered) toggle();
+        }}
       >
         {/* Scene background */}
         <div className="theme-scene">

@@ -950,3 +950,53 @@ html.light .section-alt-bg {
   background-color: rgba(67, 137, 202, 0.03) !important;
 }
 
+/* ── Video overlay — remove white wash in light mode ── */
+
+html.light .video-overlay {
+  background-color: transparent !important;
+}
+html.light .group:hover .video-overlay {
+  background-color: transparent !important;
+}
+
+/* ── Career cards — no striped bg in light mode ── */
+
+html.light .career-card {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+html.light .career-card:hover {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ── Testimonial dots — border for inactive dots in light mode ── */
+
+html.light .testimonial-dot-inactive {
+  background-color: rgba(26, 32, 48, 0.15) !important;
+  border: 1px solid rgba(26, 32, 48, 0.12);
+}
+
+/* ── Offer active button — fix invisible hover in light mode ── */
+
+html.light .offer-active-button {
+  background-color: #1a2030 !important;
+  color: #ffffff !important;
+}
+html.light .offer-active-button:hover {
+  background-color: #2a3040 !important;
+  color: #ffffff !important;
+}
+
+/* ── Logo toggling ── */
+
+.logo-dark, .logo-light {
+  transition: opacity 0.35s ease;
+}
+
+html.light .logo-dark {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+html.light .logo-light {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
