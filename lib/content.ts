@@ -13,7 +13,7 @@ export const siteConfig = {
   name: "SamyJoe",
   siteUrl:
       process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-      "https://samyjoe-1.github.io/portfolio",
+      "https://samyjoe.netlify.app",
   email: "samyjoe01011000@gmail.com",
   phone: "+20 100 741 5843",
   location: "Cairo, Egypt",
@@ -842,7 +842,7 @@ export const sitemapRoutes: Array<{ locale: Locale; page: PageId; path: string }
 ];
 
 export const staticRouteParams: Array<{ slug?: string[] }> = [
-  {},
+  { slug: [] },
   { slug: ["about"] },
   { slug: ["projects"] },
   { slug: ["career"] },
