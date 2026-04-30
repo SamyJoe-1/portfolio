@@ -42,9 +42,16 @@ export default function TrackingDashboard() {
         body: JSON.stringify({ password: pwd }),
       });
       if (!res.ok) {
+        let errText = "Invalid password";
+        try {
+          const errData = await res.json();
+          if (errData.error) errText = `Error: ${errData.error} (${res.status})`;
+        } catch(e) {
+          errText = `Error ${res.status}: ${res.statusText}`;
+        }
         localStorage.removeItem("samyjoe_tracking_token");
         setAuth(false);
-        setError("Invalid password");
+        setError(errText);
         setLoading(false);
         return;
       }
