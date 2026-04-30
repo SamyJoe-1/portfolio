@@ -1059,15 +1059,21 @@ function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="border-t border-white/8 bg-ink">
       <div className="shell flex flex-col gap-5 py-8 md:flex-row md:items-center md:justify-between">
-        <div>
+        <div className="relative">
           <Image
             src="/assets/images/main/logo.png"
             alt="SamyJoe logo"
             width={220}
             height={60}
-            className="h-auto w-[184px] md:w-[214px]"
+            className="logo-dark h-auto w-[184px] md:w-[214px]"
           />
-
+          <Image
+            src="/assets/images/main/logo-light.png"
+            alt="SamyJoe logo"
+            width={220}
+            height={60}
+            className="logo-light absolute left-0 top-1/2 -translate-y-1/2 h-auto w-[184px] md:w-[214px] opacity-0 pointer-events-none"
+          />
         </div>
         <div className="flex flex-wrap items-center gap-3">
           {socialLinks.map((link) => {

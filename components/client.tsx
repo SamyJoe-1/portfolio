@@ -14,6 +14,10 @@ import {
 
 import type { Locale, PageId } from "@/lib/content";
 import { getPath, siteConfig } from "@/lib/content";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+
+emailjs.init("Dvrt-brHBze_odX-J");
 
 type RevealProps = {
   children: ReactNode;
@@ -199,13 +203,20 @@ export function MobileMenu({
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <Link className="flex items-center" href={getPath(locale, "home")} onClick={menu.close}>
+              <Link className="flex items-center relative" href={getPath(locale, "home")} onClick={menu.close}>
                 <Image
                   src="/assets/images/main/logo.png"
                   alt="SamyJoe logo"
                   width={220}
                   height={60}
-                  className="h-auto w-[188px]"
+                  className="logo-dark h-auto w-[188px]"
+                />
+                <Image
+                  src="/assets/images/main/logo-light.png"
+                  alt="SamyJoe logo"
+                  width={220}
+                  height={60}
+                  className="logo-light absolute left-0 top-1/2 -translate-y-1/2 h-auto w-[188px] opacity-0 pointer-events-none"
                 />
               </Link>
               <button
@@ -786,54 +797,111 @@ export function ArticleScroller({
 
 export function QuickContactForm({ locale }: { locale: Locale }) {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const labels = {
     en: {
       placeholder: "Enter your email",
-      button: "Start the conversation",
-      helper: "This opens your mail client with a prefilled intro."
+      button: "Send",
+      sending: "Sending...",
+      alertEmpty: "Please enter your email first.",
+      alertSuccessTitle: "Thank You (:",
+      alertSuccessText: "I'll get back to you as soon as possible.",
+      alertErrorTitle: "Something went wrong",
+      alertErrorText: "Please reach me out via: samyjoe01011000@gmail.com."
     },
     ar: {
       placeholder: "اكتب بريدك الإلكتروني",
-      button: "ابدأ المحادثة",
-      helper: "سيتم فتح البريد مع رسالة جاهزة كبداية."
+      button: "إرسال",
+      sending: "جاري الإرسال...",
+      alertEmpty: "يرجى كتابة بريدك الإلكتروني أولاً.",
+      alertSuccessTitle: "شكراً لك (:",
+      alertSuccessText: "سأتواصل معك في أقرب وقت ممكن.",
+      alertErrorTitle: "حدث خطأ ما",
+      alertErrorText: "يرجى التواصل معي عبر: samyjoe01011000@gmail.com."
     }
   }[locale];
 
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    
+    if (!email.trim()) {
+      Swal.fire({
+        icon: "warning",
+        title: locale === "en" ? "Hold on!" : "مهلاً!",
+        text: labels.alertEmpty,
+        confirmButtonColor: "var(--brand-color, #4389ca)",
+        background: "#1a1a2e",
+        color: "#ffffff"
+      });
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs.send("service_hy068dl", "template_d8o1t0z", { from_email: email.trim() })
+      .then(() => {
+        setLoading(false);
+        setEmail("");
+
+        Swal.fire({
+          icon: "success",
+          title: labels.alertSuccessTitle,
+          text: labels.alertSuccessText,
+          confirmButtonColor: "var(--brand-color, #4389ca)",
+          background: "#1a1a2e",
+          color: "#ffffff",
+          customClass: {
+            popup: "swal-dark"
+          }
+        });
+      })
+      .catch(() => {
+        setLoading(false);
+
+        Swal.fire({
+          icon: "error",
+          title: labels.alertErrorTitle,
+          text: labels.alertErrorText,
+          confirmButtonColor: "var(--brand-color, #4389ca)",
+          background: "#1a1a2e",
+          color: "#ffffff"
+        });
+      });
+  };
+
   return (
     <form
-      className="flex flex-col gap-3 md:flex-row"
-      onSubmit={(event) => {
-        event.preventDefault();
-        const subject = encodeURIComponent(
-          locale === "en" ? "Project inquiry from portfolio" : "استفسار مشروع من الموقع"
-        );
-        const body = encodeURIComponent(
-          locale === "en"
-            ? `Hi Samy,\n\nI found your portfolio and I would like to talk about a project.\nContact email: ${email || "please reply here"}`
-            : `أهلًا سامي،\n\nشفت البورتفوليو وعايز أتكلم بخصوص مشروع.\nالبريد للتواصل: ${email || "الرد على نفس الإيميل"}`
-        );
-
-        window.open(
-          `mailto:${siteConfig.email}?subject=${subject}&body=${body}`,
-          "_blank",
-          "noopener,noreferrer"
-        );
-      }}
+      className="flex flex-col gap-3 sm:flex-row"
+      onSubmit={handleSubmit}
     >
-      <div className="flex-1">
-        <input
-          type="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder={labels.placeholder}
-          className="w-full rounded-full border border-white/10 bg-white/5 px-5 py-3.5 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-brand/55"
-        />
-        <p className="mt-2 text-xs text-white/45">{labels.helper}</p>
-      </div>
-      <button type="submit" className="primary-button justify-center">
-        <Mail className="h-4 w-4" />
-        {labels.button}
+      <input
+        type="email"
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+        placeholder={labels.placeholder}
+        className="min-w-0 flex-1 rounded-full border border-white/10 bg-white/5 px-5 py-3.5 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-brand/55"
+        disabled={loading}
+      />
+      <button 
+        type="submit" 
+        className="primary-button justify-center shrink-0"
+        disabled={loading}
+      >
+        {loading ? (
+          <>
+            <svg className="h-4 w-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            {labels.sending}
+          </>
+        ) : (
+          <>
+            <Mail className="h-4 w-4" />
+            {labels.button}
+          </>
+        )}
       </button>
     </form>
   );

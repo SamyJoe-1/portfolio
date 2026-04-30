@@ -7,10 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sweetalert2": "^11.26.24"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.15.10",
