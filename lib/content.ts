@@ -173,7 +173,7 @@ export const pageMetadata: Record<Locale, Record<PageId, PageMeta>> = {
 export const heroContent = {
   en: {
     eyebrow: "Hi, I'm SamyJoe",
-    eyebrowHtml: "Hi, I'm <span class=\"hero-underline\">SamyJoe</span>",
+    eyebrowHtml: "<span class=\"text-white\">Hi, I'm</span> <span class=\"hero-underline\">SamyJoe</span>",
     titleHtml:
         "Code is not a job. <span class=\"inline-accent\">It's a lifestyle.</span>",
     subtitle:
@@ -185,7 +185,7 @@ export const heroContent = {
   },
   ar: {
     eyebrow: "أهلًا، أنا SamyJoe",
-    eyebrowHtml: "أهلًا، أنا <span class=\"hero-underline\">SamyJoe</span>",
+    eyebrowHtml: "<span class=\"text-white\">أهلًا، أنا</span> <span class=\"hero-underline\">SamyJoe</span>",
     titleHtml:
         "الكود ليس مجرد وظيفة. <span class=\"inline-accent\">إنه أسلوب حياة.</span>",
     subtitle:

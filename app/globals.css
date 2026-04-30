@@ -109,9 +109,20 @@ body {
 }
 
 .hero-underline {
-  border-bottom: 5px solid #4389ca;
-  border-radius: 4px;
-  padding-bottom: 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px; /* Increased gap */
+}
+
+.hero-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #4389ca;
+  border-radius: 9999px; /* Pill shape */
 }
 
 /* ── Buttons ─────────────────────────────────── */
