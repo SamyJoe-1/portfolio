@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting to new portfolio...</title>
+    <script>
+      // Automatically redirect to the new domain, keeping the path if they came from an old link
+      var newDomain = "https://samyjoe.netlify.app";
+      // Optional: if you want to keep the path, you could use window.location.pathname.
+      // But since it's an old site, redirecting to the root is safer to avoid 404s on the new site.
+      window.location.replace(newDomain);
+    </script>
+    <meta http-equiv="refresh" content="0; url=https://samyjoe.netlify.app">
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      a { color: #38bdf8; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <p>This portfolio has moved. If you are not redirected automatically, <a href="https://samyjoe.netlify.app">click here</a>.</p>
+  </body>
+</html>
