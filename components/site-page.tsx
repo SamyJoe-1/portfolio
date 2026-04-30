@@ -268,9 +268,9 @@ function SiteHeader({
   return (
     <>
       <div className="border-b border-white/8 bg-[#081221]">
-        <div className="shell hidden items-center justify-between py-2 lg:flex">
+        <div className="shell hidden items-center justify-between py-1.5 lg:flex">
           <div className="flex items-center gap-3">
-            <Link href={socialLinks[2].href} target="_blank" className="primary-button px-4 py-2 text-sm">
+            <Link href={socialLinks[2].href} target="_blank" className="primary-button h-9 px-4 py-0 text-sm">
               <MessageCircleMore className="h-4 w-4" />
               {locale === "en" ? "WhatsApp" : "واتساب"}
             </Link>
@@ -298,7 +298,7 @@ function SiteHeader({
                 </Link>
               );
             })}
-            <Link href={switchHref} className="ghost-button ml-2 px-4 py-2 text-sm">
+            <Link href={switchHref} className="ghost-button ml-2 h-9 px-4 py-0 text-sm">
               {locale === "en" ? "العربية" : "English"}
             </Link>
           </div>
