@@ -1,4 +1,4 @@
-﻿export type Locale = "en" | "ar";
+export type Locale = "en" | "ar";
 export type PageId = "home" | "about" | "projects" | "career" | "articles";
 
 type LocalizedText = Record<Locale, string>;
@@ -17,7 +17,7 @@ export const siteConfig = {
   email: "samyjoe01011000@gmail.com",
   phone: "+20 100 741 5843",
   location: "Cairo, Egypt",
-  cvPath: "/assets/files/cv.pdf"
+  cvPath: "/api/download-cv"
 };
 
 export const navPages: Array<{ id: PageId; label: LocalizedText }> = [
