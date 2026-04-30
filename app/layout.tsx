@@ -88,6 +88,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.location.hostname === 'samyjoe-1.github.io') {
+                var path = window.location.pathname.replace(/^\\/portfolio/, '');
+                window.location.replace('https://samyjoe.netlify.app' + path + window.location.search + window.location.hash);
+              }
+            `
+          }}
+        />
       </head>
       <body suppressHydrationWarning>
         {children}
