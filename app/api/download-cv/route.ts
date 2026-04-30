@@ -17,8 +17,10 @@ export async function GET(request: Request) {
       const dateObj = new Date();
       const dateStr = dateObj.toISOString().split("T")[0];
 
-      // 2. Define path for JSON storage (stored in root /tracking directory)
-      const trackingDir = path.join(process.cwd(), "tracking");
+      // 2. Define path for JSON storage (stored in root /tracking directory, or /tmp on Netlify)
+      const isNetlify = process.env.NETLIFY === "true" || process.env.NODE_ENV === "production";
+      const baseDir = isNetlify ? "/tmp" : process.cwd();
+      const trackingDir = path.join(baseDir, "tracking");
       const filePath = path.join(trackingDir, `${dateStr}.json`);
 
       // Ensure directory exists
