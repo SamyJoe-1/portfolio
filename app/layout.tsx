@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import { siteConfig } from "@/lib/content";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 import "./globals.css";
 
@@ -88,9 +89,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        {/* Blocking script to prevent flash of wrong theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('sj-theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();`
+          }}
+        />
       </head>
       <body suppressHydrationWarning>
         {children}
+        <ThemeSwitcher />
       </body>
     </html>
 

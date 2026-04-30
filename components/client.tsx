@@ -193,7 +193,7 @@ export function MobileMenu({
           onClick={menu.close}
         >
           <div
-            className={`relative w-full max-w-md flex-shrink-0 rounded-[2rem] border border-white/10 bg-[#091320]/95 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] transition duration-300 ${
+            className={`mobile-menu-bg relative w-full max-w-md flex-shrink-0 rounded-[2rem] border border-white/10 bg-[#091320]/95 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.45)] transition duration-300 ${
               menu.visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
             onClick={(event) => event.stopPropagation()}
@@ -453,7 +453,7 @@ export function ProjectGallery({
           onClick={closeProject}
         >
           <div
-            className={`mx-auto flex h-full w-full max-w-6xl flex-col rounded-[2rem] border border-white/10 bg-[#08111b] transition duration-300 ${
+            className={`project-modal-bg mx-auto flex h-full w-full max-w-6xl flex-col rounded-[2rem] border border-white/10 bg-[#08111b] transition duration-300 ${
               projectModal.visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
             onClick={(event) => event.stopPropagation()}

@@ -134,7 +134,7 @@ export function SitePage({ locale, page, path }: SitePageProps) {
         }}
       />
 
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(67,137,202,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(67,137,202,0.12),transparent_24%)]" />
+      <div className="site-bg-gradient pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(67,137,202,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(67,137,202,0.12),transparent_24%)]" />
 
       <SiteHeader currentPage={page} locale={locale} navItems={navItems} />
 
@@ -265,7 +265,7 @@ function SiteHeader({
 
   return (
     <>
-      <div className="border-b border-white/8 bg-[#081221]">
+      <div className="site-topbar border-b border-white/8 bg-[#081221]">
         <div className="shell hidden items-center justify-between py-1.5 lg:flex">
           <div className="flex items-center gap-3">
             <Link href={socialLinks[2].href} target="_blank" className="primary-button h-9 px-4 py-0 text-sm">
@@ -425,7 +425,7 @@ function AboutSection({ locale }: { locale: Locale }) {
   const about = aboutHighlights[locale];
 
   return (
-    <section id="about" className="section-shell bg-white/[0.02]">
+    <section id="about" className="section-shell section-alt bg-white/[0.02]">
       <div className="shell grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
         <Reveal>
           <p className="eyebrow">{about.eyebrow}</p>
@@ -524,7 +524,7 @@ function CareerSection({
 
 function ServicesSection({ locale }: { locale: Locale }) {
   return (
-    <section id="services" className="section-shell bg-white/[0.02]">
+    <section id="services" className="section-shell section-alt bg-white/[0.02]">
       <div className="shell">
         <SectionHeader
           eyebrow={locale === "en" ? "WHAT I DO" : "ما الذي أقدمه"}
@@ -604,7 +604,7 @@ function ProjectsSection({
 
 function TestimonialsSection({ locale }: { locale: Locale }) {
   return (
-    <section id="testimonials" className="section-shell bg-white/[0.02]">
+    <section id="testimonials" className="section-shell section-alt bg-white/[0.02]">
       <div className="shell">
         <SectionHeader
           eyebrow={locale === "en" ? "Client Feedback" : "آراء العملاء"}
@@ -697,7 +697,7 @@ function ArticlesSection({
   compact: boolean;
 }) {
   return (
-    <section id="articles" className="section-shell bg-white/[0.02]">
+    <section id="articles" className="section-shell section-alt bg-white/[0.02]">
       <div className="shell">
         <SectionHeader
           eyebrow={locale === "en" ? "TECH ARTICLES" : "مقالات تقنية"}
@@ -824,7 +824,7 @@ function ProfileFactsSection({ locale }: { locale: Locale }) {
 
 function StrengthsSection({ locale }: { locale: Locale }) {
   return (
-    <section className="section-shell bg-white/[0.02]">
+    <section className="section-shell section-alt bg-white/[0.02]">
       <div className="shell">
         <SectionHeader
           eyebrow={locale === "en" ? "Working Style" : "طريقة العمل"}
@@ -888,10 +888,10 @@ function FaqSection({ locale }: { locale: Locale }) {
 
 function ContactSection({ locale }: { locale: Locale }) {
   return (
-    <section className="section-shell bg-white/[0.02]">
+    <section className="section-shell section-alt bg-white/[0.02]">
       <div className="shell">
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#08111a] px-6 py-10 md:px-10 md:py-14">
-          <div className="absolute inset-0 bg-[url('/assets/images/backdrop/map.png')] bg-cover bg-center opacity-[0.14]" />
+        <div className="contact-section-bg relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#08111a] px-6 py-10 md:px-10 md:py-14">
+          <div className="contact-map-overlay absolute inset-0 bg-[url('/assets/images/backdrop/map.png')] bg-cover bg-center opacity-[0.14]" />
           <div className="relative z-10 grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
             <Reveal>
               <p className="eyebrow">
