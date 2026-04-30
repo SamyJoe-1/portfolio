@@ -128,6 +128,7 @@ function useSwipe(options: { onNext: () => void; onPrev: () => void; threshold?:
     onTouchEnd: finishSwipe,
     onPointerDown: (event: React.PointerEvent<HTMLElement>) => {
       if (event.pointerType === "mouse" && event.button !== 0) return;
+      (event.currentTarget as HTMLElement).setPointerCapture(event.pointerId);
       setPointerStartX(event.clientX);
       setPointerEndX(event.clientX);
       setDragOffset(0);
@@ -137,8 +138,12 @@ function useSwipe(options: { onNext: () => void; onPrev: () => void; threshold?:
       setPointerEndX(event.clientX);
       setDragOffset(event.clientX - pointerStartX);
     },
-    onPointerUp: finishPointerSwipe,
-    onPointerCancel: () => {
+    onPointerUp: (event: React.PointerEvent<HTMLElement>) => {
+      try { (event.currentTarget as HTMLElement).releasePointerCapture(event.pointerId); } catch(e) {}
+      finishPointerSwipe();
+    },
+    onPointerCancel: (event: React.PointerEvent<HTMLElement>) => {
+      try { (event.currentTarget as HTMLElement).releasePointerCapture(event.pointerId); } catch(e) {}
       setPointerStartX(null);
       setPointerEndX(null);
       setDragOffset(0);
@@ -283,6 +288,7 @@ export function ProjectGallery({
 }) {
   const [activeProjectIndex, setActiveProjectIndex] = useState<number | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [showMoreDesc, setShowMoreDesc] = useState(false);
   const projectModal = useSmoothPresence(260);
 
   const activeProject =
@@ -298,6 +304,7 @@ export function ProjectGallery({
   const openProject = (index: number) => {
     setActiveProjectIndex(index);
     setActiveImageIndex(0);
+    setShowMoreDesc(false);
     projectModal.open();
   };
 
@@ -306,6 +313,7 @@ export function ProjectGallery({
     window.setTimeout(() => {
       setActiveProjectIndex(null);
       setActiveImageIndex(0);
+      setShowMoreDesc(false);
     }, 260);
   };
 
@@ -437,8 +445,8 @@ export function ProjectGallery({
               </button>
             </div>
 
-            <div className="grid flex-1 gap-0 overflow-y-auto lg:grid-cols-[1.15fr_0.85fr]">
-              <div className="flex flex-col border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-7">
+            <div className="grid flex-1 gap-0 overflow-y-auto lg:grid-cols-[1.15fr_0.85fr] lg:overflow-hidden">
+              <div className="flex flex-col border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-7 lg:overflow-y-auto custom-scrollbar">
                 <div
                   className="relative min-h-[320px] flex-1 overflow-hidden rounded-[1.5rem] border border-white/10 touch-pan-y select-none"
                   {...gallerySwipe}
@@ -457,7 +465,8 @@ export function ProjectGallery({
                           alt={`${activeProject.title} preview ${index + 1}`}
                           fill
                           sizes="(max-width: 1024px) 100vw, 55vw"
-                          className="object-cover"
+                          className="object-cover pointer-events-none"
+                          draggable={false}
                         />
                       </div>
                     ))}
@@ -505,16 +514,30 @@ export function ProjectGallery({
                 </div>
               </div>
 
-              <div className="p-5 md:p-7">
-                <p className="text-sm uppercase tracking-[0.24em] text-brand/80">
+              <div className="flex flex-col p-5 md:p-7 lg:overflow-hidden">
+                <p className="text-sm uppercase tracking-[0.24em] text-brand/80 shrink-0">
                   {activeProject.subtitle[locale]}
                 </p>
-                <div className="mt-6 grid gap-4 text-base leading-8 text-white/82">
-                  {activeProject.description[locale].map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
+                <div className="mt-6 flex-1 overflow-y-auto pr-2 lg:min-h-0 custom-scrollbar">
+                  <div className="grid gap-4 text-base leading-8 text-white/82">
+                    {activeProject.description[locale].map((paragraph, idx) => {
+                      if (!showMoreDesc && idx > 0) return null;
+                      return <p key={paragraph}>{paragraph}</p>;
+                    })}
+                  </div>
+                  {activeProject.description[locale].length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => setShowMoreDesc(!showMoreDesc)}
+                      className="mt-4 text-sm font-medium text-brand hover:text-white transition"
+                    >
+                      {showMoreDesc 
+                        ? (locale === "en" ? "Show less" : "عرض أقل") 
+                        : (locale === "en" ? "Show more" : "عرض المزيد")}
+                    </button>
+                  )}
                 </div>
-                <div className="mt-8 flex flex-wrap gap-2">
+                <div className="mt-8 flex flex-wrap gap-2 shrink-0">
                   {activeProject.tags.map((tag) => (
                     <span key={tag} className="outline-chip">
                       {tag}
