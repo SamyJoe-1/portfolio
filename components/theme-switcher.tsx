@@ -56,7 +56,10 @@ export function ThemeSwitcher() {
         {/* Toggle button */}
         <button
           type="button"
-          onClick={toggle}
+          onClick={(e) => {
+            e.stopPropagation();
+            toggle();
+          }}
           className={`theme-toggle-btn ${hovered ? "theme-toggle-visible" : ""}`}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
