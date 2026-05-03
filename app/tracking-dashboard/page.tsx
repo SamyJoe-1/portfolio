@@ -185,7 +185,7 @@ export default function TrackingDashboard() {
 
 
   if (loading) {
-    return <div className="flex h-screen items-center justify-center bg-[#070c12] text-brand font-display text-2xl">Loading Access...</div>;
+    return <div className="flex h-screen items-center justify-center bg-[#070c12] text-brand text-2xl">Loading Access...</div>;
   }
 
   if (!auth) {
@@ -197,7 +197,7 @@ export default function TrackingDashboard() {
               <Lock className="w-8 h-8" />
             </div>
           </div>
-          <h2 className="text-2xl text-white font-display uppercase text-center mb-6">Classified Hub</h2>
+          <h2 className="text-2xl text-white uppercase text-center mb-6">Classified Hub</h2>
           {error && <p className="text-red-400 text-sm mb-4 text-center">{error}</p>}
           <input
             type="password"
@@ -220,7 +220,7 @@ export default function TrackingDashboard() {
       <div className="max-w-7xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
           <div>
-            <h1 className="text-4xl font-display uppercase text-brand flex items-center gap-3">
+            <h1 className="text-4xl uppercase text-brand flex items-center gap-3">
               <Eye className="w-8 h-8" /> Intel Center
             </h1>
             <p className="text-white/50 mt-1">CV Download Telemetry & Tracking</p>
@@ -271,7 +271,7 @@ export default function TrackingDashboard() {
             <div className="flex items-center gap-3 text-white/60 mb-4">
               <Download className="w-5 h-5 text-brand" /> Total Downloads
             </div>
-            <div className="text-5xl font-display text-white">{filteredData.totalDownloads}</div>
+            <div className="text-5xl text-white">{filteredData.totalDownloads}</div>
           </div>
 
           {/* Card 2 */}
@@ -280,7 +280,7 @@ export default function TrackingDashboard() {
             <div className="flex items-center gap-3 text-white/60 mb-4">
               <Users className="w-5 h-5 text-brand" /> Unique Leads
             </div>
-            <div className="text-5xl font-display text-white">{filteredData.uniqueDownloads}</div>
+            <div className="text-5xl text-white">{filteredData.uniqueDownloads}</div>
           </div>
 
           {/* Card 3 */}
@@ -289,7 +289,7 @@ export default function TrackingDashboard() {
             <div className="flex items-center gap-3 text-white/60 mb-4">
               <Globe className="w-5 h-5 text-brand" /> Top Region
             </div>
-            <div className="text-3xl font-display text-white truncate">{filteredData.topCountry}</div>
+            <div className="text-3xl text-white truncate">{filteredData.topCountry}</div>
           </div>
 
           {/* Card 4 */}
@@ -299,7 +299,7 @@ export default function TrackingDashboard() {
               <TrendingUp className="w-5 h-5 text-brand" /> New Visit Growth
             </div>
             <div className="flex items-end gap-3">
-              <div className={`text-4xl font-display ${Number(filteredData.growth) >= 0 ? "text-green-400" : "text-red-400"}`}>
+              <div className={`text-4xl ${Number(filteredData.growth) >= 0 ? "text-green-400" : "text-red-400"}`}>
                 {Number(filteredData.growth) >= 0 ? "+" : ""}{filteredData.growth}%
               </div>
               <div className="text-xs text-white/40 mb-1 tracking-wider uppercase">vs Prev Period</div>
@@ -310,7 +310,7 @@ export default function TrackingDashboard() {
         <div className="bg-[#111c28] border border-white/10 rounded-3xl overflow-hidden">
           <div className="border-b border-white/10 p-6 flex items-center gap-3 bg-white/[0.02]">
             <Search className="w-5 h-5 text-brand" />
-            <h2 className="text-xl font-display uppercase tracking-wide">Latest 10 Interceptions</h2>
+            <h2 className="text-xl uppercase tracking-wide">Latest 10 Interceptions</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-white/70">

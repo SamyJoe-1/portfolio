@@ -21,9 +21,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ["Oswald", "sans-serif"],
-        body: ["Rubik", "Poppins", "sans-serif"],
-        arabic: ["Rubik", "Noto Sans Arabic", "sans-serif"]
+        sans: ["Rubik", "sans-serif"],
+        arabic: ["Noto Sans Arabic", "sans-serif"]
       },
       boxShadow: {
         brand: "0 8px 40px rgba(67, 137, 202, 0.18)"

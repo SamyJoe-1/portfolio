@@ -83,7 +83,7 @@ export default function RootLayout({
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap"
         />
         <script
           type="application/ld+json"

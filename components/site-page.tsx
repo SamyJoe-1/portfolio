@@ -375,7 +375,7 @@ function HeroSection({ locale }: { locale: Locale }) {
               dangerouslySetInnerHTML={{ __html: hero.eyebrowHtml ?? hero.eyebrow }}
             />
             <h1
-              className="mt-6 font-display text-5xl uppercase leading-[0.92] text-white sm:text-6xl lg:text-7xl"
+              className="mt-6 text-5xl uppercase leading-[0.92] text-white sm:text-6xl lg:text-7xl"
               dangerouslySetInnerHTML={{ __html: hero.titleHtml }}
             />
             <p className="section-copy mt-8 max-w-2xl border-s-4 border-brand ps-5 text-lg leading-9">
@@ -780,7 +780,7 @@ function ArticlesSection({
                   <p className="text-xs uppercase tracking-[0.28em] text-brand/80">
                     {article.kicker[locale]}
                   </p>
-                  <h3 className="mt-3 font-display text-4xl uppercase leading-none">
+                  <h3 className="mt-3 text-4xl uppercase leading-none">
                     {article.title[locale]}
                   </h3>
                   <p className="mt-6 text-base leading-8 text-white/75">
@@ -962,7 +962,7 @@ function PageLead({
           <Reveal>
             <p className="eyebrow">{eyebrow}</p>
             <h1
-              className="mt-4 font-display text-5xl uppercase leading-[0.95] text-white sm:text-6xl"
+              className="mt-4 text-5xl uppercase leading-[0.95] text-white sm:text-6xl"
               dangerouslySetInnerHTML={{ __html: titleHtml }}
             />
           </Reveal>

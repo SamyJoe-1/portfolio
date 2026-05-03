@@ -400,7 +400,7 @@ export function ProjectGallery({
                 <p className="text-xs uppercase tracking-[0.28em] text-brand/85 group-hover:text-white/70">
                   {project.tags.slice(0, 3).join(" / ")}
                 </p>
-                <h3 className="mt-3 font-display text-3xl uppercase leading-none text-white">
+                <h3 className="mt-3 text-3xl uppercase leading-none text-white">
                   {project.title}
                 </h3>
                 <p className="mt-3 max-w-sm text-sm text-white/78 group-hover:text-white">
@@ -429,7 +429,7 @@ export function ProjectGallery({
                   <p className="text-xs uppercase tracking-[0.28em] text-brand/80">
                     {project.tags.join(" / ")}
                   </p>
-                  <h3 className="mt-3 font-display text-4xl uppercase leading-none">
+                  <h3 className="mt-3 text-4xl uppercase leading-none">
                     {project.title}
                   </h3>
                   <p className="mt-4 max-w-2xl text-lg text-white/74">
@@ -474,7 +474,7 @@ export function ProjectGallery({
                 <p className="text-xs uppercase tracking-[0.28em] text-brand/80">
                   {activeProject.tags.slice(0, 3).join(" / ")}
                 </p>
-                <h3 className="mt-2 font-display text-3xl uppercase">
+                <h3 className="mt-2 text-3xl uppercase">
                   {activeProject.title}
                 </h3>
               </div>
