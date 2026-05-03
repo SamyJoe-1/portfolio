@@ -187,9 +187,9 @@ export const heroContent = {
     eyebrow: "أهلًا، أنا SamyJoe",
     eyebrowHtml: "<span class=\"text-white\">أهلًا، أنا</span> <span class=\"hero-underline\">SamyJoe</span>",
     titleHtml:
-        "الكود ليس مجرد وظيفة. <span class=\"inline-accent\">إنه أسلوب حياة.</span>",
+        "الكود مش وظيفة. <span class=\"inline-accent\">داه أسلوب حياة.</span>",
     subtitle:
-        "مهندس برمجيات Full-Stack من القاهرة، مصر — متخصص في Laravel وPHP Backend Engineering وRESTful API Design وLinux Server Administration",
+        "مهندس برمجيات Full-Stack من القاهرة — متخصص في Laravel وPHP Backend وRESTful API Design وLinux Server Administration",
     primaryCta: "تحميل الـ CV",
     secondaryCta: "استعراض المشاريع",
     statOne: "4+ سنوات في بناء منتجات حقيقية",
@@ -210,9 +210,9 @@ export const aboutHighlights = {
     eyebrow: "عني",
     titleHtml: "أنا مهندس <span class=\"inline-accent\">Full-Stack</span>",
     body:
-        "مهندس برمجيات Full-Stack استباقي وعملي، أمتلك خبرة تتجاوز 4 سنوات في بناء Web Applications بمستوى Production-grade من الصفر حتى الإطلاق الفعلي. أركز على End-to-end system architecture وLaravel/PHP backend engineering وRESTful API design وLinux server administration ولوحات البيانات اللحظية.",
+        "مهندس برمجيات Full-Stack عملي، عندي 4+ سنوات في بناء Web Applications بمستوى Production-grade من الصفر للإطلاق. شغلي الأساسي هو End-to-end system architecture وLaravel/PHP backend engineering وRESTful API design وLinux server administration.",
     extended:
-        "القيمة التي أقدمها لا تقتصر على كتابة الكود، بل تمتد إلى فهم الـ business flow بالكامل، وتقليل الاحتكاك داخل العمليات، وبناء أنظمة يمكن للفرق تشغيلها وتوسيعها بثقة."
+        "اللي بقدمه مش بس كود — بفهم الـ business flow كامل، وبقلل الاحتكاك في العمليات، وببني أنظمة الفرق تقدر تشغلها وتوسعها براحة."
   }
 };
 
@@ -249,21 +249,21 @@ export const strengthBlocks = [
     title: { en: "Business-aware engineering", ar: "هندسة تفهم البزنس" },
     body: {
       en: "I translate messy operational needs into clean system boundaries, flows, and interfaces that teams can use confidently.",
-      ar: "أحوّل الاحتياجات التشغيلية المعقدة إلى system boundaries وflows وواجهات واضحة يمكن للفرق استخدامها بثقة."
+      ar: "بحوّل الاحتياجات التشغيلية المعقدة لـ system boundaries وflows وواجهات واضحة الفرق تقدر تشتغل عليها بثقة."
     }
   },
   {
     title: { en: "Solo ownership", ar: "تملك كامل للمشروع" },
     body: {
       en: "From scoping and architecture to deployment and support, I am comfortable owning the full delivery cycle without handoff gaps.",
-      ar: "من الـ scoping والمعمارية حتى الـ deployment والدعم، أستطيع تملك دورة التسليم كاملة بدون handoff gaps."
+      ar: "من الـ scoping والمعمارية لحد الـ deployment والدعم، بتملك دورة التسليم كاملة بدون handoff gaps."
     }
   },
   {
     title: { en: "Automation obsession", ar: "شغف بالأتمتة" },
     body: {
       en: "I actively look for repeatable pain points and replace them with automations, AI-assisted flows, and operational shortcuts.",
-      ar: "أبحث دائمًا عن نقاط الألم المتكررة وأحوّلها إلى automations وAI-assisted flows وshortcuts تجعل الشغل أسرع وأكثر كفاءة."
+      ar: "دايمًا بدور على الأشياء المتكررة اللي بتوجع وبحوّلها لـ automations وAI-assisted flows وshortcuts تخلي الشغل أسرع."
     }
   }
 ];
@@ -276,7 +276,7 @@ export const experienceItems = [
     mode: "Hybrid",
     summary: {
       en: "Sole engineer owning a full multi-role dropshipping & logistics platform — traders, marketers, agents, warehouse, call center modules. Engineered real-time analytics, wallet management, role-based access control, and Pusher event system.",
-      ar: "المهندس الوحيد خلف منصة dropshipping ولوجستيات متعددة الأدوار، تشمل warehouse وmarketers وagents وcall center وwallet وanalytics."
+      ar: "المهندس الوحيد خلف منصة dropshipping ولوجستيات متعددة الأدوار — warehouse وmarketers وagents وcall center وwallet وreal-time analytics."
     }
   },
   {
@@ -286,7 +286,7 @@ export const experienceItems = [
     mode: "Remote",
     summary: {
       en: "Delivered AI-driven recruitment automation covering CV parsing, job matching, scoring, filtering, and interview scheduling.",
-      ar: "قدمت نظام توظيف مدعومًا بالذكاء الاصطناعي يشمل CV parsing وjob matching وscoring وfiltering وinterview scheduling."
+      ar: "بنيت نظام توظيف مدعوم بالذكاء الاصطناعي يشمل CV parsing وjob matching وscoring وfiltering وinterview scheduling."
     }
   },
   {
@@ -296,7 +296,7 @@ export const experienceItems = [
     mode: "Cairo",
     summary: {
       en: "Designed and delivered a full-stack engineering curriculum from scratch — PHP, Laravel, DB design, Blade, Bootstrap, Tailwind, JS. Mentored 50–100 developers. Awarded Best Instructor.",
-      ar: "صممت ودرّست منهج Full-Stack كامل من الصفر، مع إرشاد 50 إلى 100 مطور، والحصول على لقب Best Instructor."
+      ar: "صممت ودرّست منهج Full-Stack كامل من الصفر، أرشدت من 50 لـ 100 مطور، وجبت لقب Best Instructor."
     }
   },
   {
@@ -306,7 +306,7 @@ export const experienceItems = [
     mode: "Remote",
     summary: {
       en: "Delivered 20–50 production-grade projects — e-commerce stores, CRMs, booking platforms, dashboards, and API integrations. Consistent 5-star rating across the Arab region.",
-      ar: "سلّمت من 20 إلى 50 نظام Production في مجالات e-commerce وCRMs وbooking وdashboards وautomation workflows وintegrations."
+      ar: "سلّمت من 20 لـ 50 نظام Production في مجالات e-commerce وCRMs وbooking وdashboards وautomation وintegrations."
     }
   }
 ];
@@ -326,7 +326,7 @@ export const services = [
     },
     summary: {
       en: "Laravel, PHP, Livewire, RESTful API design, Eloquent ORM, authentication & authorization, cron jobs, Pusher real-time events, WhatsApp & SMTP notifications, and third-party API integrations.",
-      ar: "بناء Backend قوي باستخدام Laravel وPHP وLivewire، مع RESTful API Design وEloquent ORM وauthentication & authorization وcron jobs وPusher real-time events وإشعارات WhatsApp وSMTP وربط Third-party APIs."
+      ar: "بناء Backend قوي بـ Laravel وPHP وLivewire مع RESTful API Design وEloquent ORM وauthentication وcron jobs وPusher real-time events وإشعارات WhatsApp وSMTP وربط Third-party APIs."
     }
   },
   {
@@ -336,7 +336,7 @@ export const services = [
     },
     summary: {
       en: "Vue.js, React.js, Bootstrap, Tailwind CSS, jQuery, Blade Templates, Vite — responsive, performant, production-ready interfaces with SweetAlert2, Select2, DataTables, and SwiperJS.",
-      ar: "تطوير Frontend باعتماد Vue.js وReact.js وBootstrap وTailwind CSS وjQuery وBlade Templates وVite لبناء واجهات Responsive وسريعة وجاهزة للProduction، مع SweetAlert2 وSelect2 وDataTables وSwiperJS."
+      ar: "بناء Frontend بـ Vue.js وReact.js وBootstrap وTailwind CSS وjQuery وBlade Templates وVite — واجهات Responsive وسريعة وجاهزة للProduction مع SweetAlert2 وSelect2 وDataTables وSwiperJS."
     }
   },
   {
@@ -346,7 +346,7 @@ export const services = [
     },
     summary: {
       en: "Linux/VPS administration, Nginx, Docker, CI/CD pipelines, Cloudflare, SSL, Git/GitHub — full server setup, configuration, and deployment from scratch to live production.",
-      ar: "إدارة Linux/VPS وNginx وDocker وCI/CD pipelines وCloudflare وSSL وGit/GitHub، مع إعداد كامل للسيرفرات والنشر من الصفر حتى بيئة Production."
+      ar: "إدارة Linux/VPS وNginx وDocker وCI/CD pipelines وCloudflare وSSL وGit/GitHub — إعداد السيرفرات والنشر من الصفر لبيئة Production."
     }
   },
   {
@@ -356,7 +356,7 @@ export const services = [
     },
     summary: {
       en: "Curriculum design and live instruction for full-stack engineering — PHP, Laravel, database design, JavaScript, and modern frontend stacks. Mentored 50–100 developers through production-grade projects within intensive programs. Awarded Best Instructor at BlackHorse.",
-      ar: "تصميم مناهج وتدريب مباشر في Full-Stack Engineering يغطي PHP وLaravel وDatabase Design وJavaScript وModern Frontend Stacks. قمت بإرشاد 50 إلى 100 مطور عبر مشاريع Production-grade داخل برامج مكثفة، وحصلت على لقب Best Instructor في BlackHorse."
+      ar: "تصميم مناهج وتدريس مباشر في Full-Stack Engineering يغطي PHP وLaravel وDatabase Design وJavaScript وModern Frontend. أرشدت من 50 لـ 100 مطور في مشاريع Production-grade داخل برامج مكثفة، وجبت لقب Best Instructor في BlackHorse."
     }
   },
   {
@@ -366,7 +366,7 @@ export const services = [
     },
     summary: {
       en: "End-to-end automation pipelines using N8N, OpenAI API, and custom agent scripting — covering CV parsing, job matching, candidate scoring, and smart task routing. Eliminates manual bottlenecks and scales operations without adding headcount.",
-      ar: "بناء Automation pipelines متكاملة باستخدام N8N وOpenAI API وcustom agent scripting، تشمل CV Parsing وJob Matching وCandidate Scoring وSmart Task Routing. النتيجة هي تقليل الاختناقات اليدوية وتوسيع التشغيل بدون الحاجة إلى زيادة Headcount."
+      ar: "بناء Automation pipelines كاملة بـ N8N وOpenAI API وcustom agent scripting — CV Parsing وJob Matching وCandidate Scoring وSmart Task Routing. بتقلل الاختناقات اليدوية وبتوسّع التشغيل من غير ما تزود headcount."
     }
   },
   {
@@ -376,7 +376,7 @@ export const services = [
     },
     summary: {
       en: "Relational database design across MySQL, MariaDB, and PostgreSQL — schema design, data integrity constraints, migration versioning, query optimization, and backup & recovery strategies built for production-grade systems.",
-      ar: "تصميم Relational Databases على MySQL وMariaDB وPostgreSQL، بداية من Schema Design وData Integrity Constraints ووصولًا إلى Migration Versioning وQuery Optimization وخطط Backup & Recovery المناسبة لأنظمة Production-grade."
+      ar: "تصميم Relational Databases على MySQL وMariaDB وPostgreSQL — Schema Design وData Integrity وMigration Versioning وQuery Optimization وخطط Backup & Recovery لأنظمة Production."
     }
   }
 ];
@@ -666,21 +666,21 @@ export const offerCards = [
     title: { en: "Clean Architecture", ar: "معمارية نظيفة" },
     body: {
       en: "Structured, documented, Git-versioned code — production-ready from day one, no technical debt handed over.",
-      ar: "كود منظم وموثق ومربوط بـ Git، وجاهز للProduction من أول يوم، بدون ديون تقنية يتم ترحيلها لاحقًا."
+      ar: "كود منظم وموثق ومربوط بـ Git، جاهز للProduction من أول يوم، من غير ديون تقنية بتتراكم."
     }
   },
   {
     title: { en: "Full Ownership", ar: "تملك كامل" },
     body: {
       en: "I scope it, build it, and deploy it solo — no handoffs, no gaps, no babysitting required.",
-      ar: "أتولى الـ Scope والBuild والDeploy بشكل كامل، بدون Hand-offs، وبدون فجوات، وبدون حاجة لمتابعة مرهقة."
+      ar: "بتولى الـ Scope والBuild والDeploy بشكل كامل — مفيش Hand-offs، مفيش فجوات، مفيش متابعة مرهقة."
     }
   },
   {
     title: { en: "Deadline Driven", ar: "ملتزم بالمواعيد" },
     body: {
       en: "Milestone tracking, direct communication, 25min avg response — ships on time, every time.",
-      ar: "متابعة واضحة للـ Milestones، وتواصل مباشر، ومتوسط استجابة سريع؛ والنتيجة أن الشغل يخرج في موعده."
+      ar: "متابعة واضحة للـ Milestones وتواصل مباشر واستجابة سريعة — الشغل بيخرج في موعده."
     }
   }
 ];
@@ -691,39 +691,39 @@ export const articles = [
     slug: "dropshipping-platform",
     title: {
       en: "I built a full dropshipping platform. Here is what mattered.",
-      ar: "بنيت منصة dropshipping متكاملة. وهذه أهم النقاط التي صنعت الفرق."
+      ar: "بنيت منصة dropshipping متكاملة. وده اللي صنع الفرق فعلًا."
     },
     kicker: { en: "System Delivery", ar: "System Delivery" },
     image: "/assets/images/blogs/1.png",
     summary: {
       en: "What it takes to build a multi-role operation with stock, logistics, reports, wallet logic, and fulfillment workflows under one roof.",
-      ar: "ما الذي يتطلبه بناء عملية متعددة الأدوار تضم المخزون واللوجستيات والتقارير ومنطق الـ wallet وعمليات fulfillment داخل نظام واحد."
+      ar: "إيه اللي بيتطلبه بناء منظومة متعددة الأدوار تجمع المخزون واللوجستيات والتقارير ومنطق الـ wallet وعمليات fulfillment في نظام واحد."
     }
   },
   {
     slug: "ai-recruitment-pipeline",
     title: {
       en: "I automated a recruitment pipeline with AI end-to-end.",
-      ar: "قمت بأتمتة Recruitment Pipeline كاملة باستخدام AI من البداية إلى النهاية."
+      ar: "أتمتت Recruitment Pipeline كاملة بالذكاء الاصطناعي من الأول للآخر."
     },
     kicker: { en: "Automation", ar: "Automation" },
     image: "/assets/images/blogs/2.png",
     summary: {
       en: "A breakdown of matching, scoring, CV parsing, automated interviews, and where human involvement can be removed safely.",
-      ar: "تفكيك لعمليات matching وscoring وCV parsing وautomated interviews، وأين يمكن تقليل التدخل البشري بشكل آمن."
+      ar: "تفكيك لـ matching وscoring وCV parsing وautomated interviews، وفين ممكن تشيل التدخل البشري بأمان."
     }
   },
   {
     slug: "teaching-made-me-better",
     title: {
       en: "Teaching 100 developers made me a sharper engineer.",
-      ar: "تدريب 100 مطور جعلني مهندسًا أكثر دقة ونضجًا."
+      ar: "تدريب 100 مطور خلاني مهندس أحسن."
     },
     kicker: { en: "Mentorship", ar: "Mentorship" },
     image: "/assets/images/blogs/3.png",
     summary: {
       en: "Why teaching architecture, debugging, and product thinking fed back into stronger implementation decisions.",
-      ar: "كيف انعكس تدريس المعمارية وdebugging وproduct thinking على قرارات تنفيذ أقوى وأكثر وضوحًا."
+      ar: "إزاي تدريس المعمارية وdebugging وproduct thinking رجع عليّا بقرارات تنفيذ أقوى وأوضح."
     }
   }
 ];
@@ -750,17 +750,17 @@ export const faqItems = {
     {
       question: "من هو SamyJoe؟",
       answer:
-          "SamyJoe هو مهندس برمجيات Full-Stack من القاهرة، يعمل كفريلانسر ومدرب تقني، ويركز على بناء أنظمة Production-grade باستخدام Laravel وPHP وReact وTailwind وDevOps وAI Automation."
+          "SamyJoe مهندس برمجيات Full-Stack من القاهرة، بيشتغل فريلانسر ومدرب تقني، ومتخصص في بناء أنظمة Production-grade بـ Laravel وPHP وReact وTailwind وDevOps وAI Automation."
     },
     {
       question: "ما نوع الأعمال التي يقدمها SamyJoe؟",
       answer:
-          "يبني أنظمة أعمال متكاملة من البداية إلى النهاية: APIs وdashboards وmarketplaces ومنصات لوجستية وautomation pipelines وأدوات داخلية متعددة الأدوار تخدم التشغيل الحقيقي."
+          "بيبني أنظمة أعمال متكاملة من الأول للآخر: APIs وdashboards وmarketplaces ومنصات لوجستية وautomation pipelines وأدوات داخلية متعددة الأدوار للتشغيل الفعلي."
     },
     {
       question: "لماذا هذا البورتفوليو مناسب لـ AI agents؟",
       answer:
-          "لأنه يتضمن صفحات تعريفية ثابتة وstructured metadata وFAQ وsitemap وendpoint باسم llms.txt يساعد أنظمة الذكاء الاصطناعي على فهم الملف الشخصي والخدمات وأهم المشاريع بسرعة."
+          "لأنه فيه صفحات تعريفية ثابتة وstructured metadata وFAQ وsitemap وendpoint باسم llms.txt يساعد أنظمة الذكاء الاصطناعي تفهم الملف الشخصي والخدمات وأهم المشاريع بسرعة."
     }
   ]
 };
