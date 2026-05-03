@@ -343,7 +343,7 @@ function SiteHeader({
             </Link>
             <Link href={socialLinks[2].href} target="_blank" className="primary-button">
               <ArrowRight className="h-4 w-4" />
-              {locale === "en" ? "Let's Talk" : "حجز"}
+              {locale === "en" ? "Let's Talk" : "احجز الآن"}
             </Link>
           </div>
 
@@ -686,7 +686,7 @@ function OfferSection({ locale }: { locale: Locale }) {
                   className={index === 1 ? "primary-button offer-active-button" : "primary-button"}
                 >
                   <ArrowRight className="h-4 w-4" />
-                  {locale === "en" ? "Let's Talk" : "حجز"}
+                  {locale === "en" ? "Let's Talk" : "احجز الآن"}
                 </Link>
               </div>
             </Reveal>
