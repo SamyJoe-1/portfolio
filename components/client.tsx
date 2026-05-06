@@ -386,7 +386,7 @@ export function ProjectGallery({
             onClick={() => openProject(index)}
             className="group relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-panel text-start transition duration-500 hover:-translate-y-2 hover:border-brand/45 hover:shadow-brand"
           >
-            <div className="relative h-[360px] overflow-hidden">
+            <div className="relative h-[400px] overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -491,18 +491,18 @@ export function ProjectGallery({
             <div className="grid flex-1 gap-0 overflow-y-auto lg:grid-cols-[1.15fr_0.85fr] lg:overflow-hidden">
               <div className="flex flex-col border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-7 lg:overflow-y-auto custom-scrollbar">
                 <div
-                  className="relative min-h-[320px] flex-1 overflow-hidden rounded-[1.5rem] border border-white/10 touch-pan-y select-none"
+                  className="relative h-[310px] max-h-[310px] flex-1 overflow-hidden rounded-[1.5rem] border border-white/10 touch-pan-y select-none"
                   {...gallerySwipe}
                 >
                   <div
-                    className="flex h-full w-full transition-transform duration-500 ease-out"
+                    className="flex h-[310px] max-h-[310px] w-full transition-transform duration-500 ease-out"
                     dir="ltr"
                     style={{
                       transform: `translateX(calc(-${activeImageIndex * 100}% + ${gallerySwipe.dragOffset}px))`
                     }}
                   >
                     {activeProject.gallery.map((image, index) => (
-                      <div key={image} className="relative h-full min-w-full">
+                      <div key={image} className="relative h-[310px] max-h-[310px] min-w-full">
                         <Image
                           src={image}
                           alt={`${activeProject.title} preview ${index + 1}`}
