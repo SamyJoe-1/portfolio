@@ -555,8 +555,8 @@ export function ProjectGallery({
                     </button>
                   </div>
                 </div>
-                {/* Tag pills — placed under slideshow so right panel stays gap-free */}
-                <div className="mt-4 flex flex-wrap gap-2">
+                {/* Tag pills — separated from slideshow with a visible divider */}
+                <div className="mt-5 border-t border-white/10 pt-5 flex flex-wrap gap-2">
                   {activeProject.tags.map((tag) => (
                     <span key={tag} className="outline-chip">
                       {tag}
