@@ -555,6 +555,14 @@ export function ProjectGallery({
                     </button>
                   </div>
                 </div>
+                {/* Tag pills — placed under slideshow so right panel stays gap-free */}
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {activeProject.tags.map((tag) => (
+                    <span key={tag} className="outline-chip">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               <div className="flex flex-col p-5 md:p-7 lg:overflow-hidden">
@@ -579,13 +587,6 @@ export function ProjectGallery({
                         : (locale === "en" ? "Show more" : "عرض المزيد")}
                     </button>
                   )}
-                </div>
-                <div className="mt-8 flex flex-wrap gap-2 shrink-0">
-                  {activeProject.tags.map((tag) => (
-                    <span key={tag} className="outline-chip">
-                      {tag}
-                    </span>
-                  ))}
                 </div>
               </div>
             </div>
