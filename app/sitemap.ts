@@ -1,43 +1,20 @@
 import type { MetadataRoute } from "next";
 
-import { buildAbsoluteUrl, sitemapRoutes, projects, articles } from "@/lib/content";
+import { buildAbsoluteUrl, sitemapRoutes } from "@/lib/content";
 
 export const dynamic = "force-static";
 
+/**
+ * Only real, crawlable pages go in the sitemap.
+ * Fragment URLs (e.g. /projects#ashrat) are ignored by Google — they
+ * all resolve to the same HTML as /projects and waste crawl budget.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes: MetadataRoute.Sitemap = sitemapRoutes.map((route) => ({
+  return sitemapRoutes.map((route) => ({
     url: buildAbsoluteUrl(route.path),
-    changeFrequency: "weekly",
-    priority: route.page === "home" ? 1 : 0.8
+    changeFrequency: "weekly" as const,
+    // AR home is a translation, not the canonical root — lower priority
+    priority: route.page === "home" && route.locale === "en" ? 1 : route.page === "home" ? 0.9 : 0.8,
+    lastModified: new Date()
   }));
-
-  // Map out deep links for all Projects
-  projects.forEach((project) => {
-    routes.push({
-      url: buildAbsoluteUrl(`/projects#${project.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.7
-    });
-    routes.push({
-      url: buildAbsoluteUrl(`/ar/projects#${project.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.7
-    });
-  });
-
-  // Map out deep links for all Articles
-  articles.forEach((article) => {
-    routes.push({
-      url: buildAbsoluteUrl(`/articles#${article.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.6
-    });
-    routes.push({
-      url: buildAbsoluteUrl(`/ar/articles#${article.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.6
-    });
-  });
-
-  return routes;
 }

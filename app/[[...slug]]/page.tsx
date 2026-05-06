@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { SitePage } from "@/components/site-page";
 import {
+  buildAbsoluteUrl,
   getPageMetadata,
   getPath,
   resolveRoute,
@@ -41,22 +42,23 @@ export async function generateMetadata({
     description: meta.description,
     keywords: meta.keywords,
     alternates: {
-      canonical,
+      canonical: buildAbsoluteUrl(canonical),
       languages: {
-        "en-US": getPath("en", route.page),
-        "ar-EG": getPath("ar", route.page)
+        "en": buildAbsoluteUrl(getPath("en", route.page)),
+        "ar": buildAbsoluteUrl(getPath("ar", route.page)),
+        "x-default": buildAbsoluteUrl(getPath("en", route.page))
       }
     },
     openGraph: {
       type: "website",
       title: meta.title,
       description: meta.description,
-      url: canonical,
+      url: buildAbsoluteUrl(canonical),
       siteName: `${siteConfig.name} Portfolio`,
       locale: route.locale === "ar" ? "ar_EG" : "en_US",
       images: [
         {
-          url: "/assets/images/about/og.png",
+          url: `${siteConfig.siteUrl}/assets/images/about/og.png`,
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} Portfolio`
@@ -67,7 +69,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: meta.title,
       description: meta.description,
-      images: ["/assets/images/about/og.png"]
+      images: [`${siteConfig.siteUrl}/assets/images/about/og.png`]
     }
   };
 }
